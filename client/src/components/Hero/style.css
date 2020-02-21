@@ -1,0 +1,60 @@
+/* .hero {
+  height: 700px;
+  background-image: url("images/learning-app-pic-three.jpg");
+  background-size: cover;
+  background-position: right;
+  position: relative;
+} */
+
+.jumbotron {
+  background-image: url("images/learning-girl-with-book.png");
+  background-repeat: no-repeat;
+  align-content: center;
+  background-position: right;
+  height: 700px;
+  color: white;
+  text-align: left;
+}
+
+/* img {
+  height: 200px;
+  
+} */
+
+.hero::after {
+  content: "";
+  display: block;
+  opacity: .4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1, .hero h2 {
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 55px;
+  padding-top: 60px;
+  /* margin-top: 0; */
+}
+
+#start-learning-btn {
+  /* margin-left: 120px; */
+  position: relative;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.jumbotron button:focus {
+  outline: none;
+}
+

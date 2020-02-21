@@ -1,0 +1,163 @@
+form {
+    display: block;
+    text-align: center;
+}
+
+
+.container input {
+    border: 1px solid rgb(243, 243, 243);
+    /* border-bottom: 1px solid #1e5799; */
+    /* box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.03); */
+    /* color: rgb(102, 102, 102); */
+    color: black;
+    display: block;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease 0s;
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    /* border: 2px solid rgb(19, 121, 146); */
+}
+
+.container input:hover {
+    /* border: 2px solid #3b7cc5; */
+    border: 2px solid rgb(19, 121, 146);
+}
+
+.container input:focus {
+    outline: 0;
+}
+
+.container .container-forms .container-info {
+    font-size: 0;
+    text-align: left;
+}
+
+.container .container-forms .container-info .info-item {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 16px;
+    height: 320px;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    vertical-align: top;
+    width: 300px;
+}
+
+.container .container-forms .container-info .info-item p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.container .container-forms .container-info .info-item .btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* #sign-up-btn {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+} */
+
+input[type="password"] {
+  width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #signup, #login {
+    width: 100%;
+    background: #2c3e50;
+  }
+  
+  #signup {
+    height: 400px;
+  }
+  
+  #login {
+    height: 200px;
+  }
+  
+  .yellow {
+    background-color: gold;
+  }
+  
+  #buttons {
+    height: 100px;
+    background: #2c3e50;
+  }
+  
+  #buttons > p {
+    width: 49.95%;
+    float: left;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    height: 75%;
+    margin: 0;
+  }
+  
+  #buttons > p:hover {
+    background: #f1c40f;
+    color: #2c3e50;
+    cursor: pointer;
+  }
+  
+  #signup > input, #signup > button {
+    margin-top: 20px;
+    margin-left: 105px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+  }
+  
+  #first, #last, #confirm {
+    width: 250px;
+  }
+  
+  #email {
+    width: 175px;
+  }
+  
+  #password {
+    width: 125px;
+    margin-left: 6px !important;
+  }
+  
+  #login > #email, #login > #password, #login > button {
+    width: 250px;
+    margin-left: 125px !important;
+    margin-top: 20px;
+    height: 25px;
+  }
+   */

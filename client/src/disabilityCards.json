@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "./images/dyslexia-card.jpg",
+        "link": "https://dyslexiaida.org/dyslexia-basics/",
+        "game": "http://dyslexiahelp.umich.edu/tools/fun-games-for-dyslexics"
+    },
+    {
+        "id": 2,
+        "image": "./images/dyscalculia-math-card.jpg",
+        "link": "https://ldaamerica.org/types-of-learning-disabilities/dyscalculia/",
+        "game": "http://numberdyslexia.com/top-10-must-have-free-apps-for-dyscalculia-2019/"
+    },
+    {
+        "id": 3,
+        "image": "./dysgraphia-writing-card.jpg",
+        "link": "https://dyslexiaida.org/understanding-dysgraphia/",
+        "game": "https://academictherapycenter.com/2014/05/apps-to-help-students-with-dysgraphia-and-writing-difficulties/"
+    },
+    {
+        "id": 4,
+        "image": "./images/auditory-card.jpg",
+        "link": "https://www.asha.org/public/hearing/Auditory-Processing-Disorder/",
+        "game": "https://www.virtualspeechcenter.com/apps/category/Auditory_Processing?gclid=CjwKCAiA1rPyBRAREiwA1UIy8IuDRvPBqoNUpvG6ir6oIFU6gL1lM2mUoDoKRh7BMDnXlBKroiaNORoCSyQQAvD_BwE"
+    },
+    {
+        "id": 5,
+        "image": "./images/visual-card.jpg",
+        "link": "https://www.advancedvisiontherapycenter.com/assessments/visual_processing/",
+        "game": "https://www.specialmomadvocate.com/apps-help-visual-processing/"
+    },
+    {
+        "id": 6,
+        "image": "./images/adhd-card.jpg",
+        "link": "https://add.org/",
+        "game": "https://www.additudemag.com/slideshows/brain-training-apps-like-lumosity/"
+    }
+]

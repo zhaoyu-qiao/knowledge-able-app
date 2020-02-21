@@ -1,0 +1,96 @@
+
+.search-btn {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.search-btn:focus {
+  outline: none;   
+}
+
+
+input[type="text"] {
+  width: 70%;
+}
+
+.search-form-cards{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  /* background: rgb(236, 243, 245); */
+  padding-top: 3rem;
+  /* padding-bottom: 12rem; */
+  width: 400%;
+  /* margin: 1rem; */
+}
+
+.dsylexia-card {
+  background-image: url("images/dyslexia-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 245px;
+  width: 250px;
+}
+
+.math-disability-card {
+  background-image: url("images/dyscalculia-math-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 245px;
+  width: 250px;
+}
+
+.writing-disability-card{
+  background-image: url("images/dysgraphia-writing-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 245px;
+  width: 250px;
+}
+
+.auditory-disability-card {
+  background-image: url("images/auditory-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 265px;
+  width: 252px;
+  margin-top: 20px;
+}
+
+.visual-disability-card{
+  background-image: url("images/visual-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 265px;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.adhd-disability-card{
+  background-image: url("images/adhd-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 265px;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.rounded-lg {
+  margin-left: 100px;
+  margin-top: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+   /* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+   transition: transform .2s;
+}
+
+.rounded-lg:hover{
+  filter: brightness(115%);
+  transform: scale(1.05);
+} 
+
+.user-search{
+  background: #FFFFFF;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+}
