@@ -25,12 +25,24 @@ input[type="text"] {
   /* margin: 1rem; */
 }
 
+
+.card .btn {
+  margin-right: 12px;
+  /* border: 2px solid white; */
+}
+
+.card .btn:focus{
+  outline: none;
+}
+
+
 .dsylexia-card {
   background-image: url("images/dyslexia-card.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 245px;
   width: 250px;
+  /* width: 15rem; */
 }
 
 .math-disability-card {
@@ -55,7 +67,7 @@ input[type="text"] {
   background-repeat: no-repeat;
   height: 265px;
   width: 252px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .visual-disability-card{
@@ -63,8 +75,7 @@ input[type="text"] {
   background-size: cover;
   background-repeat: no-repeat;
   height: 265px;
-  width: 250px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .adhd-disability-card{
@@ -73,18 +84,18 @@ input[type="text"] {
   background-repeat: no-repeat;
   height: 265px;
   width: 250px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
-.rounded-lg {
-  margin-left: 100px;
+.disability-card {
+   margin-left: 100px;
   margin-top: 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
    /* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
    transition: transform .2s;
 }
 
-.rounded-lg:hover{
+.disability-card:hover{
   filter: brightness(115%);
   transform: scale(1.05);
 } 

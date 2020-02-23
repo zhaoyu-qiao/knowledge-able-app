@@ -3,13 +3,19 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import Carousel from "../components/Carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+// For the carousel run: npm install react-responsive-carousel
+
+
+
 // import SignUpSignInForm from "../components/SignUpForm"
 // import { useParams } from "react-router-dom";
 // import Form from "../components/Form";
 // import images from "./images";
 
 
-//// This Hero component is for this About page (the cover page) ////
+//// This Hero component and the Carousel are for this About page (the cover page). ////
 function About() {
   return (
     <div>
@@ -43,7 +49,7 @@ function About() {
             <div class="card text-white bg-info mb-3" style={{ maxWidth: 18 + 'rem' }}>
               <h5 class="card-header text-center">What do we do?</h5>
               <div class="card-body">
-                <h5 class="card-title">Helping indivduals overcome their learning disability.  <br /> <br />
+                <h5 class="card-title">Helping individuals overcome their learning disability.  <br /> <br />
                   Find a tutor near you. <br /> <br />
                   Find a learning program near you. <br /> <br />
                   Find an online learning program. <br /><br />
@@ -60,10 +66,10 @@ function About() {
               <h5 class="card-header text-center">How do we do it?</h5>
               <div class="card-body">
                 <h5 class="card-title"> On the Learnig Journey page you can: <br /> <br />
-                  ~ View our suggested resources <br /> <br />
-                  ~ Complete the search form to find resources that will help you with your learning disability. <br /> <br />
-                  ~ Save the results you like.  <br /> <br />
-                  ~ Add them to your learning development plan and take action.  <br /> <br />
+                  <i class="fa fa-arrow-right text-info "></i> View our suggested resources <br /> <br />
+                  <i class="fa fa-arrow-right text-info "></i> Complete the search form to find resources that will help you with your learning disability. <br /> <br />
+                  <i class="fa fa-arrow-right text-info "></i> Save the results you like.  <br /> <br />
+                  <i class="fa fa-arrow-right text-info "></i> Add them to your learning materials and take action.  <br /> <br />
                 </h5>
               </div>
             </div>
@@ -74,59 +80,47 @@ function About() {
               <h5 class="card-header text-center">Words of Encourgement</h5>
               <div class="card-body">
                 <h5 class="card-title">
-                  "You are Able to obtain the necessary Knowledge!
+                  "You are Able to obtain the necessary Knowledge!"
                  <br /> <br />
                   "Believe in Yourself"
                  <br /> <br />
                   "The difference between those who fail and those who succeed is largely perserverance. Never quit"
                   <br /> <br />
+                  "In the middle of every difficulty lies opportunity"
+                  <br /> <br />
                   You are not alone. We are here to help!
                   <br /> <br />
-                  <br /> <br />
-                  <br /> <br />
+                  <br />
                 </h5>
               </div>
             </div>
           </Col>
         </Row>
 
+        <br />
+        <br />
 
         <Row>
           <Col size="md-12">
+            <div >
+              <p></p>
+            </div>
+          </Col>
+        </Row>
+
+        <br />
+
+        <Row>
+          <Col size="md-12">
+            <h1 class="card-header text-center text-info">What Some Of Our Users Are Saying</h1>
+            <div className="carousel">
+              <Carousel />
+            </div>
           </Col>
         </Row>
 
         <br />
         <br />
-
-        {/* Booststrap carousel. Has random pictures for now. */}
-        {/* <Row>
-          <Col size="md-12">
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://memberpress.com/wp-content/uploads/2018/12/Learning-Management@2x-1024x760.png" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                  <img src="https://www.schoology.com/sites/default/files/schoology-learning-management-system.png" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                  <img src="https://www.pageuppeople.com/wp-content/uploads/2019/02/11-Trends-in-Learning-Banner-V2-1024x735.jpg" class="d-block w-100" alt="..." />
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-
-          </Col>
-        </Row> */}
 
 
       </Container>

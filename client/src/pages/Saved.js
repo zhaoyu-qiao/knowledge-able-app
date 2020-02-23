@@ -15,10 +15,30 @@ class Saved extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container saved-materials bg-info">
+                <h2 className="text-center">Your Saved Learning Materials</h2>
                 <br />
-                <h2>Your Saved Learning Materials</h2>
-                <br />
+                {/* <div class="media">
+                    <img src="https://www.sweetrush.com/wp-content/uploads/2018/04/eLearning.png" class="mr-3" alt="..." />
+                    <div class="media-body">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <h5 class="mt-0">Media heading</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                        <br />
+                        <br />
+                        <i class="far fa-arrow-alt-circle-down "></i>
+                    </div>
+                    <br />
+                    <br />
+
+                </div> */}
+
                 <br />
                 {/* <img src="..." class="img-fluid" alt="Responsive image"></img> */}
                 <Results books={this.state.savedBooks} />
