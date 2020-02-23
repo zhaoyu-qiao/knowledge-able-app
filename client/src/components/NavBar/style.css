@@ -1,7 +1,11 @@
-nav.navbar.navbar-default {
+/* nav.navbar.navbar-default {
     margin-bottom: 0;
-  }
+  } */
   
+nav{
+  margin-bottom: 70px;
+}
+
   .navbar-brand {
     color: white;
   }
@@ -40,10 +44,7 @@ nav.navbar.navbar-default {
   }
 
 
-  form {
-    display: block;
-    text-align: center;
-}
+
 
 
 

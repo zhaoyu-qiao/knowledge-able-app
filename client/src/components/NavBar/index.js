@@ -7,7 +7,7 @@ import "./style.css";
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-info bg-info">
+        <nav className="navbar navbar-expand-lg navbar-info bg-info fixed-top">
             <Link className="navbar-brand" to="/">
                 Knowledge-ABLE
         </Link>

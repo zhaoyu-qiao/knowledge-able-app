@@ -16,11 +16,13 @@ form {
     width: 250px;
     padding: 10px 15px;
     border-radius: 30px;
+    border: 2px solid rgb(43, 158, 187);
     /* border: 2px solid rgb(19, 121, 146); */
 }
 
 .container input:hover {
     /* border: 2px solid #3b7cc5; */
+   
     border: 2px solid rgb(19, 121, 146);
 }
 

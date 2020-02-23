@@ -6,6 +6,7 @@ import "./style.css";
 
 
 function Form(props) {
+
   return (
 
     <div className="container search-form">
@@ -14,45 +15,102 @@ function Form(props) {
         {/* ****** The learning disability cards ****** */}
         <div className="search-form-cards w-auto p-3 col-md-12">
           <h2>Common Learning Disabilities</h2>
-          <h4>Click on a below image for our suggested resources on the learning disability</h4>
+          <h4>See the below images for our suggested resources on the learning disability</h4>
 
-          <a href="https://dyslexiaida.org/dyslexia-basics/" target='blank' rel="noopener noreferrer" >
+
+          <div class="card bg-info disability-card" style={{ width: 15.7 + 'rem' }}>
+            <div class="card-img-top dsylexia-card" alt="..."></div>
+            <div class="card-body">
+              <a href="https://dyslexiaida.org/dyslexia-basics/" target='blank' rel="noopener noreferrer" class="btn btn-light">View</a>
+              <a href="http://dyslexiahelp.umich.edu/tools/fun-games-for-dyslexics" target='blank' rel="noopener noreferrer" class="btn btn-light">Skill Games</a>
+            </div>
+          </div>
+
+          <div class="card bg-info disability-card" style={{ width: 15.7 + 'rem' }}>
+            <div class="card-img-top math-disability-card" alt="..."></div>
+            <div class="card-body">
+              <a href="https://ldaamerica.org/types-of-learning-disabilities/dyscalculia/" target='blank' rel="noopener noreferrer" class="btn btn-light">View</a>
+              <a href="http://numberdyslexia.com/top-10-must-have-free-apps-for-dyscalculia-2019/" target='blank' rel="noopener noreferrer" class="btn btn-light">Skill Games</a>
+            </div>
+          </div>
+
+
+          <div class="card bg-info disability-card" style={{ width: 15.7 + 'rem' }}>
+            <div class="card-img-top writing-disability-card " alt="..."></div>
+            <div class="card-body">
+              <a href="https://dyslexiaida.org/understanding-dysgraphia/" target='blank' rel="noopener noreferrer" class="btn btn-light">View</a>
+              <a href="https://academictherapycenter.com/2014/05/apps-to-help-students-with-dysgraphia-and-writing-difficulties/" target='blank' rel="noopener noreferrer"
+                class="btn btn-light">Skill Games</a>
+            </div>
+          </div>
+
+
+          <div class="card bg-info disability-card" style={{ width: 15.9 + 'rem' }}>
+            <div class="card-img-top auditory-disability-card" alt="..."></div>
+            <div class="card-body">
+              <a href="https://www.asha.org/public/hearing/Auditory-Processing-Disorder/" target='blank' rel="noopener noreferrer" class="btn btn-light">View</a>
+              <a href="https://www.virtualspeechcenter.com/apps/category/Auditory_Processing?gclid=CjwKCAiA1rPyBRAREiwA1UIy8IuDRvPBqoNUpvG6ir6oIFU6gL1lM2mUoDoKRh7BMDnXlBKroiaNORoCSyQQAvD_BwE"
+                target='blank' rel="noopener noreferrer" class="btn btn-light">Skill Games</a>
+            </div>
+          </div>
+
+
+          <div class="card bg-info disability-card" style={{ width: 15.9 + 'rem' }}>
+            <div class="card-img-top visual-disability-card" alt="..."></div>
+            <div class="card-body">
+              <a href="https://www.advancedvisiontherapycenter.com/assessments/visual_processing/" target='blank' rel="noopener noreferrer" class="btn btn-light">View</a>
+              <a href="https://www.specialmomadvocate.com/apps-help-visual-processing/" target='blank' rel="noopener noreferrer" class="btn btn-light">Skill Games</a>
+            </div>
+          </div>
+
+          <div class="card bg-info disability-card" style={{ width: 15.7 + 'rem' }}>
+            <div class="card-img-top adhd-disability-card" alt="..."></div>
+            <div class="card-body">
+              <a href="https://add.org/" target='blank' rel="noopener noreferrer" class="btn btn-light">View</a>
+              <a href="https://www.additudemag.com/slideshows/brain-training-apps-like-lumosity/" target='blank' rel="noopener noreferrer" class="btn btn-light">Skill Games</a>
+            </div>
+          </div>
+
+
+          {/* Place Holders for the learning disability images not in a bootstrap card */}
+          {/* <a href="https://dyslexiaida.org/dyslexia-basics/" target='blank' rel="noopener noreferrer" >
             <div className="dsylexia-card rounded-lg">
 
               {props.children}
             </div>
-          </a>
+          </a> */}
 
-          <a href="https://ldaamerica.org/types-of-learning-disabilities/dyscalculia/" target='blank' rel="noopener noreferrer" >
+          {/* <a href="https://ldaamerica.org/types-of-learning-disabilities/dyscalculia/" target='blank' rel="noopener noreferrer" >
             <div className="math-disability-card  rounded-lg">
 
               {props.children}
             </div>
-          </a>
-          <a href="https://dyslexiaida.org/understanding-dysgraphia/" target='blank' rel="noopener noreferrer" >
+          </a> */}
+          {/* <a href="https://dyslexiaida.org/understanding-dysgraphia/" target='blank' rel="noopener noreferrer" >
             <div className="writing-disability-card  rounded-lg">
 
               {props.children}
             </div>
-          </a>
-          <a href="https://www.asha.org/public/hearing/Auditory-Processing-Disorder/" target='blank' rel="noopener noreferrer" >
+          </a> */}
+          {/* <a href="https://www.asha.org/public/hearing/Auditory-Processing-Disorder/" target='blank' rel="noopener noreferrer" >
             <div className="auditory-disability-card  rounded-lg">
 
               {props.children}
             </div>
-          </a>
-          <a href="https://www.advancedvisiontherapycenter.com/assessments/visual_processing/" target='blank' rel="noopener noreferrer" >
+          </a> */}
+          {/* <a href="https://www.advancedvisiontherapycenter.com/assessments/visual_processing/" target='blank' rel="noopener noreferrer" >
             <div className="visual-disability-card  rounded-lg">
 
               {props.children}
             </div>
-          </a>
-          <a href="https://add.org/" target='blank' rel="noopener noreferrer" >
+          </a> */}
+          {/* <a href="https://add.org/" target='blank' rel="noopener noreferrer" >
             <div className="adhd-disability-card  rounded-lg">
 
               {props.children}
             </div>
-          </a>
+          </a> */}
+
         </div>
 
         <br />
