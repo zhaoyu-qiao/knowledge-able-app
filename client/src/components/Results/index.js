@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./style.css";
 
 
 //// This Results componment is used on the Search.js page (Your Learning Journey) ////
