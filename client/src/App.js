@@ -5,16 +5,13 @@ import NavBar from "./components/NavBar";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 
-
 import About from "./pages/About";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
+import Dictionary from "./components/Dictionary";
 // import NoMatch from "./pages/NoMatch";
 
-
-
 class App extends Component {
-
   render() {
     return (
       <Router>
@@ -26,32 +23,15 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
+            <Route exact path="/dictionary" component={Dictionary} />
+
             {/* <Route exact path="/noMatch" component={NoMatch} /> */}
           </Wrapper>
           <Footer />
         </div>
       </Router>
-    )
-  };
-};
+    );
+  }
+}
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
