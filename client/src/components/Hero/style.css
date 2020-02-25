@@ -15,8 +15,8 @@
   color: white;
   text-align: left;
   display: flex;
- flex-direction: column;
- margin-top: 56px;
+  flex-direction: column;
+  margin-top: 56px;
 }
 
 /* img {
@@ -27,7 +27,7 @@
 .hero::after {
   content: "";
   display: block;
-  opacity: .4;
+  opacity: 0.4;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -41,7 +41,8 @@
   z-index: 2;
 }
 
-.hero h1, .hero h2 {
+.hero h1,
+.hero h2 {
   color: white;
 }
 
@@ -54,10 +55,9 @@
 #start-learning-btn {
   /* margin-left: 120px; */
   position: relative;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .jumbotron button:focus {
   outline: none;
 }
-

@@ -228,18 +228,19 @@ function Form(props) {
             value={props.search}
             name="search"
             type="text"
-            className="form-control"
+            className="user-search-input"
             placeholder="What do you need learning help with?"
             id="search"
           />
-
-          <button
-            type="submit"
-            onClick={props.handleFormSubmit}
-            className="btn btn-info btn-lg search-btn"
-          >
-            Search
-          </button>
+          <div>
+            <button
+              type="submit"
+              onClick={props.handleFormSubmit}
+              className="btn btn-info btn-lg search-btn"
+            >
+              Search
+            </button>
+          </div>
         </div>
       </form>
     </div>

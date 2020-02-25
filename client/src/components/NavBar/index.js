@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SignUpSignInForm from "../SignUpForm/index";
+// import SignUpSignInForm from "../SignUpForm/index";
+import SignInForm from "../SignInForm/index";
+import Browsealoud from "../Browsealoud/index";
 import "./style.css";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
@@ -11,6 +13,7 @@ function Navbar() {
       <Link className="navbar-brand" to="/">
         Knowledge-ABLE
       </Link>
+
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
@@ -49,6 +52,14 @@ function Navbar() {
             >
               Your Learning Materials
             </Link>
+          </li>
+
+          {/* Browsealoud text to speech software: https://www.texthelp.com/en-us/products/browsealoud/ */}
+          <li className="browse-aloud form-inline">
+            {/* <div id="__ba_launchpad"></div> */}
+            <div>
+              <Browsealoud />
+            </div>
           </li>
 
           {/* The Dictionary dropdown menu */}
@@ -101,55 +112,12 @@ function Navbar() {
                 />
               </div>
             </form>
-
             {/* </div> */}
           </div>
 
-          {/* The SignUp / SignIn Form Modal Popup . This is not complete*/}
-
+          {/* React Modal SignIn Form. This is not complete*/}
           <div className="form-inline">
-            {/* <!-- Cited: https://getbootstrap.com/docs/4.4/components/modal/ -->
-                                   <!-- Button trigger modal --> */}
-            <button
-              type="button"
-              className="btn btn-info my-2 my-sm-0"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              id="signIn-signUp-btn"
-              htmlFor="modal-toggle"
-            >
-              Sign Up / Sign In
-            </button>
-            {/* <!-- Modal --> */}
-            <div
-              className="modal fade"
-              id="exampleModal"
-              tabIndex="-1"
-              role="dialog"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                  {/* <div className="media">
-                                  <img src="" width="100%" alt="" />
-                                  </div> */}
-
-                  <div className="modal-body text-center">
-                    <SignUpSignInForm id="signUpSignIn">
-                      {/* handleSignup={this.handleSignup} */}
-                    </SignUpSignInForm>
-                    <p></p>
-                    <div className="modal-footer text-center">
-                      <a href="/">Already have an account? Sign In</a>
-                      {/* <a href='/discover' className="btn btn-primary btn-lg" id="sign-up-btn">Sign Up</a> */}
-
-                      {/* <a href="#sign-in-btn" className="btn btn-primary btn-lg" id="modal-close-btn"> Sign In</a> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <SignInForm />
           </div>
         </ul>
       </div>
@@ -158,32 +126,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-// function Navbar() {
-//     return (
-
-//         <nav className="navbar navbar-expand-lg text-light">
-//             <div className="container">
-//                 <Link className="navbar-brand" to="/">Google Books Search<img className="logo"></img></Link>
-
-//                 <ul className="navbar-nav">
-//                     <li className="nav-item">
-//                         <Link
-//                             to="/search"
-//                             className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-//                         > Search</Link>
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link
-//                             to="/saved"
-//                             className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-//                         >Saved</Link>
-//                     </li>
-//                 </ul>
-//             </div>
-//         </nav>
-
-//     );
-// }
-
-// export default Navbar;
