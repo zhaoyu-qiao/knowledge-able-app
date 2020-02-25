@@ -1,10 +1,8 @@
 // this file is only for querying the words api for dictionary
 import axios from "axios";
-// import unirest from "unirest";
 
 const BASEURL = "https://wordsapiv1.p.mashape.com/words/";
-const X_Mashape_Key = "c689d162f5mshf499a4cc1699b78p184059jsn3776ce81a3ea";
-
+const X_Mashape_Key = process.env.REACT_APP_X_Mashape_Key;
 // https://stackoverflow.com/questions/45578844/how-to-set-header-and-options-in-axios
 // You can send a get request with Headers (for authentication with jwt for example):
 // axios.get('https://example.com/getSomething', {
@@ -19,13 +17,12 @@ export default {
   // request header X-Mashape-Key=c689d162f5mshf499a4cc1699b78p184059jsn3776ce81a3ea
   searchWord: function(query) {
     console.log("Search Word");
-    return axios
-      .get(BASEURL + query, {
-        headers: {
-          "X-Mashape-Key": X_Mashape_Key
-        }
-      })
-      // .then(console.log); //!!! TODO- toUpperCase
+    return axios.get(BASEURL + query, {
+      headers: {
+        "X-Mashape-Key":"c689d162f5mshf499a4cc1699b78p184059jsn3776ce81a3ea"
+      }
+    });
+    // .then(console.log); //!!! TODO- toUpperCase
   }
   // Saves a book to the database
   // saveBook: function (bookData) {
