@@ -11,13 +11,14 @@ class Dictionary extends Component {
     result: {}, // either object or array
     search: "",
     word: "",
-    defination: "",
+    definition: "",
     partOfSpeech: "",
     examples: [],
     pronunciation: [] // should this just be a string?
   };
 
   handleInputChange = event => {
+    console.log("Handle Input");
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -26,25 +27,29 @@ class Dictionary extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-
-    DicAPI.searchWord()
-
-      //   .then(console.log)
-      //   .then(res =>
-      //     this.setState({
-      //       word: res.word
-      //     })
-      //   )
+    //console.log("Form submitted");
+    DicAPI.searchWord(this.state.search)
+      // .then(res => console.log)
+      .then(res =>
+        this.setState({
+          word: res.data.word,
+          definition: res.data.results[0].definition,
+          partOfSpeech: res.data.results[0].partOfSpeech,
+          examples: res.data.results[0].examples[0],
+          pronunciation: res.data.pronunciation.all
+        })
+      )
       .catch(err => console.log(err));
   };
 
-  //   response.word is the word
+  //   response.data.word is the word
   //   (response.results is an array of results of explainations of the word)
   //   response.results[i].defination   // different definations of the word
   //   response.results[i].partOfSpeech // part of speech information
   //   response.results[i].examples     // example sentences
   //   response.pronunciation           // pronounciation
 
+  //   TODO - use map() to loop through results.
   render() {
     return (
       <div>
@@ -74,7 +79,15 @@ class Dictionary extends Component {
         <hr />
         <div>
           <h1> Search Result </h1>
-          <div>Results will be here </div>
+          <div>
+            <h3>Results will be here: </h3>
+            <br />
+            <p> Word: {this.state.word} </p>
+            <p> Definition: {this.state.definition}</p>
+            <p> Part Of Speech: {this.state.partOfSpeech} </p>
+            <p> example: {this.state.examples} </p>
+            <p> pronunciation: {this.state.pronunciation} </p>
+          </div>
         </div>
       </div>
     );

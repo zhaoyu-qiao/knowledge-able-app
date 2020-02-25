@@ -15,6 +15,9 @@ import { Input, FormBtn } from "../GeneralForm";
 // response.pronunciation           // pronounciation
 
 class Dictionary extends Component {
+  constructor(props) {
+    super(props);
+  }
   state = {
     results: [], // either object or array
     search: "Hello",
@@ -27,16 +30,16 @@ class Dictionary extends Component {
 
   // !!! This function is not triggering? Does css has anything to do with it?
   handleInputChange = event => {
-    console.log("Handle Input");
+    //console.log("Handle Input");
     const { name, value } = event.target;
-    // const { name, value } = event.target;
     this.setState({
-      [name]: value
+      search: value
     });
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
+    //console.log("Form submitted");
     DicAPI.searchWord(this.state.search) //!!!seems to be undefined
       .then(res =>
         this.setState({
@@ -50,9 +53,11 @@ class Dictionary extends Component {
     return (
       <div>
         <div>
-          <h1 id="search-img"> Search your word here </h1>
+          <h1 id="img"> Search your word here </h1>
           <form>
-            <Input
+            <input
+              id="search_input"
+              type="text"
               value={this.state.search}
               onChange={this.handleInputChange}
               name="search"
