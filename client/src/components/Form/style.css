@@ -1,18 +1,30 @@
-
 .search-btn {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  margin-top: 20px;
+  left: 50%;
 }
 
 .search-btn:focus {
-  outline: none;   
+  outline: 0;
 }
 
-
-input[type="text"] {
+.user-search input[type="text"] {
   width: 70%;
+  border-radius: 30px;
+  border: 2px solid rgb(43, 158, 187);
+  margin: 0;
+  padding: 10px;
 }
 
-.search-form-cards{
+.user-search input:hover {
+  border: 2px solid rgb(19, 121, 146);
+}
+
+.user-search input:focus {
+  outline: 0;
+}
+
+.search-form-cards {
   display: flex;
   flex-flow: row wrap;
   padding: 20px;
@@ -25,16 +37,13 @@ input[type="text"] {
   /* margin: 1rem; */
 }
 
-
 .card .btn {
   margin-right: 12px;
-  /* border: 2px solid white; */
 }
 
-.card .btn:focus{
+.card .btn:focus {
   outline: none;
 }
-
 
 .dsylexia-card {
   background-image: url("images/dyslexia-card.jpg");
@@ -53,7 +62,7 @@ input[type="text"] {
   width: 250px;
 }
 
-.writing-disability-card{
+.writing-disability-card {
   background-image: url("images/dysgraphia-writing-card.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,7 +79,7 @@ input[type="text"] {
   /* margin-top: 20px; */
 }
 
-.visual-disability-card{
+.visual-disability-card {
   background-image: url("images/visual-card.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -78,7 +87,7 @@ input[type="text"] {
   /* margin-top: 20px; */
 }
 
-.adhd-disability-card{
+.adhd-disability-card {
   background-image: url("images/adhd-card.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -88,20 +97,23 @@ input[type="text"] {
 }
 
 .disability-card {
-   margin-left: 100px;
+  margin-left: 100px;
   margin-top: 20px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-   /* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
-   transition: transform .2s;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  /* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+  transition: transform 0.2s;
 }
 
-.disability-card:hover{
+.disability-card:hover {
   filter: brightness(115%);
   transform: scale(1.05);
-} 
+}
 
-.user-search{
-  background: #FFFFFF;
-  padding-top: 12rem;
-  padding-bottom: 10rem;
+.user-search {
+  background: #ffffff;
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }

@@ -1,0 +1,6 @@
+/* Cited React Login Modal: https://www.npmjs.com/package/react-login-modal-sm */
+
+.login-btn {
+  transform: translate(-50%, 0);
+  outline: none;
+}
