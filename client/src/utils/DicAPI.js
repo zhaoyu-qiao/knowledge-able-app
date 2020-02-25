@@ -25,7 +25,7 @@ export default {
           "X-Mashape-Key": X_Mashape_Key
         }
       })
-      .then(console.log);
+      // .then(console.log); //!!! TODO- toUpperCase
   }
   // Saves a book to the database
   // saveBook: function (bookData) {
