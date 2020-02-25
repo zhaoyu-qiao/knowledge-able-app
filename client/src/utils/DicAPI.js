@@ -19,7 +19,7 @@ export default {
     console.log("Search Word");
     return axios.get(BASEURL + query, {
       headers: {
-        "X-Mashape-Key":"c689d162f5mshf499a4cc1699b78p184059jsn3776ce81a3ea"
+        "X-Mashape-Key": X_Mashape_Key
       }
     });
     // .then(console.log); //!!! TODO- toUpperCase
