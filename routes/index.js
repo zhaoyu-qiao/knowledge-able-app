@@ -8,6 +8,8 @@ console.log(API_KEY);
 router.use("/api", apiRoutes);
 
 router.route("/search").post((req, res) => {
+  // https://stackoverflow.com/questions/45578844/how-to-set-header-and-options-in-axios
+  // https://www.wordsapi.com/docs/
   // Make the axios request to the dictionary api here.
   // USing the req.body.search parameter, return the results
   axios
