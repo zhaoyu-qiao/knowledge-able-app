@@ -14,19 +14,13 @@ const X_Mashape_Key = process.env.REACT_APP_X_Mashape_Key;
 //!!! Is this correct with the header? - yes
 export default {
   // https://www.wordsapi.com/docs/
-  // request header X-Mashape-Key=c689d162f5mshf499a4cc1699b78p184059jsn3776ce81a3ea
+  // use your own api to do the axios on server route /search.
   searchWord: function(query) {
-    console.log("Search Word");
-    return axios.get(BASEURL + query, {
-      headers: {
-        "X-Mashape-Key": X_Mashape_Key
-      }
-    });
-    // .then(console.log); //!!! TODO- toUpperCase
+    return axios.post("/search", { search: query });
   }
   // Saves a book to the database
   // saveBook: function (bookData) {
-  //   return axios.post("/api/books", bookData).then(result => result.data);
+  //   return axios.post("/api/books", bookData)\\.then(result => result.data);
   // },
   // // Deletes the book with the given id
   // deleteBook: function (id) {
