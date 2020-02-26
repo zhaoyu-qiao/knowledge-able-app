@@ -200,11 +200,14 @@ class Dictionary extends Component {
                   </p>
                 </div>
               ))}
-              {
-                // <div>
-                //   <p>Pronunciation:{this.state.pronunciation}</p>
-                // </div>
-              }
+              {Object.keys(this.state.pronunciation).map(key => (
+                <div>
+                  <p>
+                    <b className="text-info">Pronunciation-{key}</b>:{" "}
+                    {this.state.pronunciation[key]}
+                  </p>
+                </div>
+              ))}
               {/* {this.state.pronunciation(pron=>(
                 <div>
                 <p>Pronunciation:{pron}</p>
