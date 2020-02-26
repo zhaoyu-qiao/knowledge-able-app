@@ -33,11 +33,12 @@ class Dictionary extends Component {
     //console.log("Handle Input");
     const { name, value } = event.target;
     this.setState({
-      search: value
+      [name]: value
     });
   };
 
   handleFormSubmit = event => {
+    console.log("hitting from other component");
     event.preventDefault();
     //console.log("Form submitted");
     DicAPI.searchWord(this.state.search) //!!!seems to be undefined

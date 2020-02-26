@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 // import SignUpSignInForm from "../SignUpForm/index";
 import SignInForm from "../SignInForm/index";
 import Browsealoud from "../Browsealoud/index";
+import Dictionary from "../Dictionary/index";
+
 import "./style.css";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
@@ -75,8 +77,9 @@ function Navbar() {
               Dictionary
             </button>
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
-            <form className="dropdown-menu p-4">
-              <div className="form-group">
+            <div className="dropdown-menu p-4">
+              <Dictionary />
+              {/* <div className="form-group">
                 <label
                   htmlFor="exampleDropdownFormEmail2"
                   className="text-primary"
@@ -110,8 +113,8 @@ function Navbar() {
                   className="form-control dictionary-results"
                   id="exampleDropdownFormPassword2"
                 />
-              </div>
-            </form>
+              </div> */}
+            </div>
             {/* </div> */}
           </div>
 
