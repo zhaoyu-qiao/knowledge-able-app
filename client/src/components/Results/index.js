@@ -47,12 +47,12 @@ class Results extends Component {
           ) : (
             <div>
               {this.props.books.map(result => (
-                <div className="card mb-3" key={result._id}>
+                <div className="card mb-3 border" key={result._id}>
                   <div className="row">
                     <div className="col-md-2">
                       <img
                         alt={result.title}
-                        className="img-fluid"
+                        className="iimg-fluid align-self-center mr-3"
                         src={result.image}
                       />
                     </div>
@@ -65,14 +65,14 @@ class Results extends Component {
                         <div>
                           <a
                             href={result.link}
-                            className="btn btn-outline-primary"
+                            className="btn badge-pill btn-outline-dark mt-3"
                             target="_blank"
                           >
                             Details
                           </a>
                           <button
                             onClick={() => this.handleSave(result)}
-                            className="btn btn-outline-dark"
+                            className="btn badge-pill btn-outline-info mt-3"
                           >
                             {this.state.savedBooks
                               .map(book => book._id)
