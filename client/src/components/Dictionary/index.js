@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import DicAPI from "../../utils/DicAPI";
 import { Input, FormBtn } from "../GeneralForm/index";
-
+import "./style.css";
 // Dictionary should be its own functional component and have state.
 // It should be a form with input, submit button and also a field to display the response
 // Takes in the input value and put it in search field
@@ -40,8 +40,9 @@ class Dictionary extends Component {
     DicAPI.searchWord(this.state.search)
       .then(res => {
         console.log("response", res);
+
         this.setState({
-          results: res.data.results,
+          results: res.data.results || ["no results"],
           word: res.data.word,
           pronunciation: res.data.pronunciation
         });
@@ -51,7 +52,7 @@ class Dictionary extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ overflow: "scroll", maxHeight: "400" + "px" }}>
         <div>
           <h4 className="text-info"> Search your word here </h4>
           <form>
@@ -86,25 +87,34 @@ class Dictionary extends Component {
           </h4>
           {this.state.results.length > 0 ? (
             <div>
-              {Object.keys(this.state.pronunciation).map(key => (
+              {console.log(typeof this.state.pronunciation)}{" "}
+              {typeof this.state.pronunciation == "object" ? (
+                Object.keys(this.state.pronunciation).map(key => (
+                  <div>
+                    <p>
+                      <span className="text-info">Pronunciation-{key}</span>:{" "}
+                      {this.state.pronunciation[key]}
+                    </p>
+                  </div>
+                ))
+              ) : (
                 <div>
                   <p>
-                    <span className="text-info">Pronunciation-{key}</span>:{" "}
-                    {this.state.pronunciation[key]}
+                    <span className="text-info">Pronunciation</span>:{" "}
+                    {this.state.pronunciation}
                   </p>
                 </div>
-              ))}
-              <hr />
+              )}
               {this.state.results.map((result, index) => (
                 <div>
                   <p>
                     <span className="text-info">Definition{index + 1}</span>:
-                    {result.definition}
+                    {result.definition || "Not defined"}
                   </p>
 
                   <p>
                     <span className="text-info">Part Of Speech</span> :
-                    {result.partOfSpeech}
+                    {result.partOfSpeech || "Not listed"}
                   </p>
                   <hr />
                 </div>
