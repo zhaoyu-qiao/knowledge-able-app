@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import SignInForm from "../SignInForm/index";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
-
+// This is for scrolling feature
+// import { DropdownButton, MenuItem } from 'react-bootstrap'
 import "./style.css";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
@@ -65,7 +66,7 @@ function Navbar() {
           </li>
 
           {/* The Dictionary dropdown menu */}
-          <div className="dropdown form-inline my-2 my-lg-0">
+          <div className="dropdown form-inline my-2 my-lg-0 ">
             <button
               className="btn btn-info dropdown-toggle"
               type="button"
@@ -77,7 +78,10 @@ function Navbar() {
               Dictionary
             </button>
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
-            <div className="dropdown-menu p-4">
+            <div
+              className="dropdown-menu p-4"
+              style={{ "overflow-y": "scroll" }}
+            >
               <Dictionary />
               {/* <div className="form-group">
                 <label
