@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Results from "../components/Results";
+import SavedBooks from "../components/SavedBooks";
 
 class Saved extends Component {
   state = {
@@ -41,7 +41,7 @@ class Saved extends Component {
 
         <br />
         {/* <img src="..." className="img-fluid" alt="Responsive image"></img> */}
-        <Results books={this.state.savedBooks} />
+        <SavedBooks books={this.state.savedBooks} />
       </div>
     );
   }
