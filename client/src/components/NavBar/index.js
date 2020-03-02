@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 // import SignUpSignInForm from "../SignUpForm/index";
 // import SignInForm from "../SignInForm/index";
 import LoginModal from "../LoginModal/index";
@@ -121,8 +122,9 @@ function Navbar() {
             </div>
             {/* </div> */}
           </div>
-          {/* React Modal SignIn Form. This is not complete*/}
-          {/* React Responsive Modal SignIn SignUp Form.*/}
+
+          {/* React Responsive Modal SignIn SignUp Form. */}
+
           <div className="form-inline">
             <LoginModal />
             {/* <SignInForm /> */}
