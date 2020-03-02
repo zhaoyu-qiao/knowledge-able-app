@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import SignUpSignInForm from "../SignUpForm/index";
-import SignInForm from "../SignInForm/index";
+// import SignInForm from "../SignInForm/index";
+import LoginModal from "../LoginModal/index";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
 // This is for scrolling feature
@@ -122,9 +123,10 @@ function Navbar() {
             {/* </div> */}
           </div>
 
-          {/* React Modal SignIn Form. This is not complete*/}
+          {/* React Responsive Modal SignIn SignUp Form. */}
           <div className="form-inline">
-            <SignInForm />
+            <LoginModal />
+            {/* <SignInForm /> */}
           </div>
         </ul>
       </div>
