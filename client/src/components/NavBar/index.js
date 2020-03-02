@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SignInForm from "../SignInForm/index";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
+import Note from "../Note";
 // This is for scrolling feature
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 import "./style.css";
@@ -118,6 +119,27 @@ function Navbar() {
                   id="exampleDropdownFormPassword2"
                 />
               </div> */}
+            </div>
+            {/* </div> */}
+          </div>
+
+          <div className="dropdown form-inline my-2 my-lg-0 ">
+            <button
+              className="btn btn-info dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Note
+            </button>
+            {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
+            <div
+              className="dropdown-menu p-4"
+              style={{ "overflow-y": "scroll" }}
+            >
+              <Note />
             </div>
             {/* </div> */}
           </div>

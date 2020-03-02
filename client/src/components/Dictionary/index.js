@@ -107,6 +107,7 @@ class Dictionary extends Component {
               )}
               {this.state.results.map((result, index) => (
                 <div>
+                  <hr />
                   <p>
                     <span className="text-info">Definition{index + 1}</span>:
                     {result.definition || "Not defined"}
@@ -116,7 +117,6 @@ class Dictionary extends Component {
                     <span className="text-info">Part Of Speech</span> :
                     {result.partOfSpeech || "Not listed"}
                   </p>
-                  <hr />
                 </div>
               ))}
             </div>
