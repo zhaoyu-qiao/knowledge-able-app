@@ -30,5 +30,6 @@
     "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.1.2",
     "unirest": "^0.6.0"
+
   }
 }

@@ -10,6 +10,7 @@ class Results extends Component {
   };
   //life cycle https://reactjs.org/docs/react-component.html
   //STU Ajax form delete
+
   // componentDidMount() {
   //   API.savedBooks()
   //     .then(savedBooks => this.setState({ savedBooks: savedBooks }))
@@ -79,14 +80,17 @@ class Results extends Component {
                           href={result.link}
                           className="btn badge-pill btn-outline-dark mt-3"
                           target="_blank"
+
                           rel="noopener noreferrer"
                         >
                           View
+
                         </a>
                         <button
                           onClick={() => this.handleSave(result)}
                           className="btn badge-pill btn-outline-info mt-3"
                         >
+
                           {/* When the user clicks on the save button, the name of the button changes to Saved! to inform the user their selection was saved */}
                           {this.state.savedBooks
                             .map(book => book._id)
