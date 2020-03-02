@@ -58,7 +58,6 @@ function Navbar() {
               Your Learning Materials
             </Link>
           </li>
-
           {/* Browsealoud text to speech software: https://www.texthelp.com/en-us/products/browsealoud/ */}
           <li className="browse-aloud form-inline">
             {/* <div id="__ba_launchpad"></div> */}
@@ -66,7 +65,6 @@ function Navbar() {
               <Browsealoud />
             </div>
           </li>
-
           {/* The Dictionary dropdown menu */}
           <div className="dropdown form-inline my-2 my-lg-0 ">
             <button
@@ -123,32 +121,8 @@ function Navbar() {
             </div>
             {/* </div> */}
           </div>
-
-//           <div className="dropdown form-inline my-2 my-lg-0 ">
-//             <button
-//               className="btn btn-info dropdown-toggle"
-//               type="button"
-//               id="dropdownMenuButton"
-//               data-toggle="dropdown"
-//               aria-haspopup="true"
-//               aria-expanded="false"
-//             >
-//               Note
-//             </button>
-//             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
-//             <div
-//               className="dropdown-menu p-4"
-//               style={{ "overflow-y": "scroll" }}
-//             >
-//               <Note />
-//             </div>
-//             {/* </div> */}
-//           </div>
-
-//           {/* React Modal SignIn Form. This is not complete*/}
-
-          {/* React Responsive Modal SignIn SignUp Form. */}
-
+          {/* React Modal SignIn Form. This is not complete*/}
+          {/* React Responsive Modal SignIn SignUp Form.*/}
           <div className="form-inline">
             <LoginModal />
             {/* <SignInForm /> */}
