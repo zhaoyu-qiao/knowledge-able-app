@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 // import SignUpSignInForm from "../SignUpForm/index";
 // import SignInForm from "../SignInForm/index";
 import LoginModal from "../LoginModal/index";
@@ -58,7 +59,6 @@ function Navbar() {
               Your Learning Materials
             </Link>
           </li>
-
           {/* Browsealoud text to speech software: https://www.texthelp.com/en-us/products/browsealoud/ */}
           <li className="browse-aloud form-inline">
             {/* <div id="__ba_launchpad"></div> */}
@@ -66,7 +66,6 @@ function Navbar() {
               <Browsealoud />
             </div>
           </li>
-
           {/* The Dictionary dropdown menu */}
           <div className="dropdown form-inline my-2 my-lg-0 ">
             <button
