@@ -11,6 +11,7 @@
     "react-dom": "^16.6.3",
     "react-login-modal-sm": "^1.0.8",
     "react-responsive-carousel": "^3.1.51",
+    "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.1"
   },

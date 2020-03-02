@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import SignUpSignInForm from "../SignUpForm/index";
-import SignInForm from "../SignInForm/index";
+// import SignInForm from "../SignInForm/index";
+import LoginModal from "../LoginModal/index";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
 import Note from "../Note";
@@ -123,30 +124,34 @@ function Navbar() {
             {/* </div> */}
           </div>
 
-          <div className="dropdown form-inline my-2 my-lg-0 ">
-            <button
-              className="btn btn-info dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Note
-            </button>
-            {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
-            <div
-              className="dropdown-menu p-4"
-              style={{ "overflow-y": "scroll" }}
-            >
-              <Note />
-            </div>
-            {/* </div> */}
-          </div>
+//           <div className="dropdown form-inline my-2 my-lg-0 ">
+//             <button
+//               className="btn btn-info dropdown-toggle"
+//               type="button"
+//               id="dropdownMenuButton"
+//               data-toggle="dropdown"
+//               aria-haspopup="true"
+//               aria-expanded="false"
+//             >
+//               Note
+//             </button>
+//             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
+//             <div
+//               className="dropdown-menu p-4"
+//               style={{ "overflow-y": "scroll" }}
+//             >
+//               <Note />
+//             </div>
+//             {/* </div> */}
+//           </div>
 
-          {/* React Modal SignIn Form. This is not complete*/}
+//           {/* React Modal SignIn Form. This is not complete*/}
+
+          {/* React Responsive Modal SignIn SignUp Form. */}
+
           <div className="form-inline">
-            <SignInForm />
+            <LoginModal />
+            {/* <SignInForm /> */}
           </div>
         </ul>
       </div>

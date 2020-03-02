@@ -27,6 +27,9 @@
     "mongoose": "^5.3.16",
     "react-login-modal-sm": "^1.0.8",
     "react-responsive-carousel": "^3.1.51",
-    "react-router-dom": "^5.1.2"
+    "react-responsive-modal": "^4.0.1",
+    "react-router-dom": "^5.1.2",
+    "unirest": "^0.6.0"
+
   }
 }
