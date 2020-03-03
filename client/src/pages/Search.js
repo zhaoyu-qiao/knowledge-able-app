@@ -61,6 +61,11 @@ class Search extends React.Component {
           {/* <h2>Results</h2> */}
           <Results books={this.state.books} />
         </div>
+        <script
+          async
+          src="https://cse.google.com/cse.js?cx=013302808669620956042:x66xgf9gejf"
+        ></script>
+        <div class="gcse-search"></div>
       </div>
     );
   }
