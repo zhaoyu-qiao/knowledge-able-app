@@ -1,11 +1,38 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../GeneralForm/index";
+// import noteController from "../../../../controllers/notesController";
 
 class Note extends Component {
   state = {
     comment: "",
     title: "",
     link: ""
+  };
+
+  handleInputChange = event => {
+    //console.log("Handle Input");
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log("Form submitted", this.state.title);
+    // routes need to be added to routes folder, server needs to use them.
+    // here goes the create note document function.
+    // DicAPI.searchWord(this.state.search)
+    //   .then(res => {
+    //     console.log("response", res);
+
+    //     this.setState({
+    //       results: res.data.results || ["no results"],
+    //       word: res.data.word,
+    //       pronunciation: res.data.pronunciation
+    //     });
+    //   })
+    //   .catch(err => console.log(err));
   };
 
   // handle input
@@ -19,29 +46,29 @@ class Note extends Component {
           <form>
             <b>Title:</b>
             <Input
-              id="title_input"
+              id="title"
               type="text"
               value={this.state.title}
               onChange={this.handleInputChange}
-              name="title_input"
+              name="title"
               placeholder="Your note title"
             />
             <b>Link:</b>
             <Input
-              id="link_input"
+              id="link"
               type="text"
               value={this.state.link}
               onChange={this.handleInputChange}
-              name="link_input"
+              name="link"
               placeholder="Put the link you like here"
             />
             <b>Comment:</b>
             <Input
-              id="comment_input"
+              id="comment"
               type="text"
               value={this.state.comment}
               onChange={this.handleInputChange}
-              name="comment_input"
+              name="comment"
               placeholder="Comment here"
             />
             <FormBtn
