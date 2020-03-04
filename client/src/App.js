@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import Dictionary from "./components/Dictionary";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 // import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
@@ -24,6 +26,8 @@ class App extends Component {
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
             <Route exact path="/dictionary" component={Dictionary} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
 
             {/* <Route exact path="/noMatch" component={NoMatch} /> */}
           </Wrapper>

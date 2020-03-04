@@ -4,11 +4,28 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+const morgan = require("morgan");
+// express-session is for passport.js
+// const session = require("express-session");
+
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(morgan("dev"));
+
+// Requiring passport as we've configured it
+// const passport = require("./passport");
+// app.use(
+//   session({
+//     secret: "keyboard cat",
+//     resave: true,
+//     saveUninitialized: true
+//   })
+// );
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
