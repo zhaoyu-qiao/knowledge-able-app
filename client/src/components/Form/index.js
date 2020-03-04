@@ -6,15 +6,16 @@ import "./style.css";
 function Form(props) {
   return (
     <div className="container search-form">
+      <h2 className="text-center">Common Learning Disabilities</h2>
+      <br />
+      <h4 className="text-center">
+        See the below images for our suggested resources on the learning
+        disability
+      </h4>
+      <br />
       <form className="search">
         {/* ****** The learning disability cards ****** */}
         <div className="search-form-cards w-auto p-3 col-md-12">
-          <h2>Common Learning Disabilities</h2>
-          <h4>
-            See the below images for our suggested resources on the learning
-            disability
-          </h4>
-
           <div
             className="card bg-info disability-card"
             style={{ width: 15.7 + "rem" }}
