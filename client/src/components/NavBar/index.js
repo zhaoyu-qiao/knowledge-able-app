@@ -32,7 +32,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              About
+              About 
             </Link>
           </li>
           <li className="nav-item">
@@ -44,7 +44,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              Learning Journey
+              Journey
             </Link>
           </li>
           <li className="nav-item">
@@ -56,7 +56,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              Your Learning Materials
+              Materials
             </Link>
           </li>
           {/* Browsealoud text to speech software: https://www.texthelp.com/en-us/products/browsealoud/ */}
