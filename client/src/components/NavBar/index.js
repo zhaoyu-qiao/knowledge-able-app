@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// import SignUpSignInForm from "../SignUpForm/index";
-// import SignInForm from "../SignInForm/index";
-import LoginModal from "../LoginModal/index";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
 import Note from "../Note/index";
 // This is for scrolling feature
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 import "./style.css";
+import AuthService from "../AuthService";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
 
 function Navbar() {
+  const Auth = new AuthService();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-info bg-info fixed-top">
       <Link className="navbar-brand" to="/">
@@ -32,7 +31,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              About 
+              About
             </Link>
           </li>
           <li className="nav-item">
@@ -109,12 +108,18 @@ function Navbar() {
               <Note />
             </div>
           </div>
-          {/* React Responsive Modal SignIn SignUp Form. */}
 
-          <div className="form-inline">
-            <LoginModal />
-            {/* <SignInForm /> */}
-          </div>
+          {/*SignIn SignUp Forms. */}
+          <li className="nav-item">
+            <Link className="nav-link" to="/signup">
+              SignUp
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              SignIn
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

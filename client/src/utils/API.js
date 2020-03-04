@@ -21,5 +21,18 @@ export default {
   // Get the saved a books from the database
   savedBooks: function() {
     return axios.get("/api/books").then(result => result.data);
+  },
+
+  // Gets a single user by id
+  getUser: id => {
+    return axios.get(`/api/users/${id}`);
+  },
+  // sign up a user to our service
+  signUpUser: (username, email, password) => {
+    return axios.post("api/users/signup", {
+      username: username,
+      email: email,
+      password: password
+    });
   }
 };
