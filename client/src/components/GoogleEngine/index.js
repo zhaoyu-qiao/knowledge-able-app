@@ -1,0 +1,15 @@
+import React from "react";
+import "./style.css";
+
+export default function GoogleEngine(props) {
+  return (
+    <div>
+      <script
+        async
+        src="https://cse.google.com/cse.js?cx=013302808669620956042:x66xgf9gejf"
+      ></script>
+      <h2 style={{ textAlign: "center" }}>Search For More Information Here:</h2>
+      <div class="gcse-search" id="google-search"></div>
+    </div>
+  );
+}
