@@ -3,6 +3,7 @@ import Form from "../components/Form";
 import Results from "../components/Results";
 import API from "../utils/API";
 import Header from "../components/Header";
+import GoogleEngine from "../components/GoogleEngine";
 
 class Search extends React.Component {
   state = {
@@ -61,11 +62,12 @@ class Search extends React.Component {
           {/* <h2>Results</h2> */}
           <Results books={this.state.books} />
         </div>
-        <script
+        {/* <script
           async
           src="https://cse.google.com/cse.js?cx=013302808669620956042:x66xgf9gejf"
         ></script>
-        <div class="gcse-search"></div>
+        <div class="gcse-search"></div> */}
+        <GoogleEngine />
       </div>
     );
   }

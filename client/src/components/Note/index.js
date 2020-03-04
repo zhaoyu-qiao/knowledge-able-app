@@ -17,7 +17,7 @@ class Note extends Component {
         <div>
           <h4 className="text-info"> Put your notes here </h4>
           <form>
-            Title:
+            <b>Title:</b>
             <Input
               id="title_input"
               type="text"
@@ -26,7 +26,7 @@ class Note extends Component {
               name="title_input"
               placeholder="Your note title"
             />
-            Link:
+            <b>Link:</b>
             <Input
               id="link_input"
               type="text"
@@ -35,7 +35,7 @@ class Note extends Component {
               name="link_input"
               placeholder="Put the link you like here"
             />
-            Comment:
+            <b>Comment:</b>
             <Input
               id="comment_input"
               type="text"
