@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const noteSchema = new Schema({
   _id: { type: String },
   title: { type: String },
-  link: { type: String }
+  link: { type: String },
+  comment: { type: String }
 });
 
 const Note = mongoose.model("Note", noteSchema);
