@@ -3,7 +3,9 @@ import { Input, FormBtn } from "../GeneralForm/index";
 
 class Note extends Component {
   state = {
-    note: ""
+    comment: "",
+    title: "",
+    link: ""
   };
 
   // handle input
@@ -15,16 +17,35 @@ class Note extends Component {
         <div>
           <h4 className="text-info"> Put your notes here </h4>
           <form>
+            Title:
             <Input
-              id="search_input"
+              id="title_input"
               type="text"
-              value={this.state.input}
+              value={this.state.title}
               onChange={this.handleInputChange}
-              name="input"
-              placeholder="Insert your notes"
+              name="title_input"
+              placeholder="Your note title"
+            />
+            Link:
+            <Input
+              id="link_input"
+              type="text"
+              value={this.state.link}
+              onChange={this.handleInputChange}
+              name="link_input"
+              placeholder="Put the link you like here"
+            />
+            Comment:
+            <Input
+              id="comment_input"
+              type="text"
+              value={this.state.comment}
+              onChange={this.handleInputChange}
+              name="comment_input"
+              placeholder="Comment here"
             />
             <FormBtn
-              disabled={!this.state.search}
+              disabled={!this.state.title || !this.state.comment}
               onClick={this.handleFormSubmit}
             >
               Submit{" "}
@@ -42,7 +63,7 @@ class Note extends Component {
             }}
           >
             {" "}
-            Search Result{" "}
+            Note Result{" "}
           </h4>
         </div>
       </div>
