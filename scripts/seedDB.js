@@ -36,6 +36,28 @@ db.Book
     process.exit(1);
   });
 
+//seed the not collection
+
+  const noteSeed = [
+    {
+      Comment: "This is a test comment",
+      title: "Test title",
+      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
+    }
+  ];
+  
+  db.Note
+    .remove({})
+    .then(() => db.Note.collection.insertMany(noteSeed))
+    .then(data => {
+      console.log(data.result.n + " records inserted!");
+      process.exit(0);
+    })
+    .catch(err => {
+      console.error(err);
+      process.exit(1);
+    });
+
 
 
 
