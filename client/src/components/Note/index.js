@@ -1,38 +1,33 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../GeneralForm/index";
-// import noteController from "../../../../controllers/notesController";
-
+import NoteAPI from "../../utils/NoteAPI";
 class Note extends Component {
   state = {
+    notes: [],
     comment: "",
     title: "",
     link: ""
   };
 
   handleInputChange = event => {
-    //console.log("Handle Input");
+    console.log("Handle Input");
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
+    console.log(this.state);
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("Form submitted", this.state.title);
-    // routes need to be added to routes folder, server needs to use them.
-    // here goes the create note document function.
-    // DicAPI.searchWord(this.state.search)
-    //   .then(res => {
-    //     console.log("response", res);
-
-    //     this.setState({
-    //       results: res.data.results || ["no results"],
-    //       word: res.data.word,
-    //       pronunciation: res.data.pronunciation
-    //     });
-    //   })
-    //   .catch(err => console.log(err));
+    NoteAPI.saveNote({
+      title: this.state.title,
+      link: this.state.link,
+      comment: this.state.comment
+    })
+      .then(() => console.log)
+      .catch(err => console.log(err));
   };
 
   // handle input

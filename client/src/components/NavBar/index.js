@@ -79,10 +79,7 @@ function Navbar() {
               Dictionary
             </button>
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
-            <div
-              className="dropdown-menu p-4"
-              style={{ "overflow-y": "scroll" }}
-            >
+            <div className="dropdown-menu p-4" style={{ overflowY: "scroll" }}>
               <Dictionary />
             </div>
             {/* </div> */}
@@ -101,10 +98,7 @@ function Navbar() {
               Note
             </button>
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
-            <div
-              className="dropdown-menu p-4"
-              style={{ "overflow-y": "scroll" }}
-            >
+            <div className="dropdown-menu p-4" style={{ overflowY: "scroll" }}>
               <Note />
             </div>
           </div>
