@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../GeneralForm/index";
+import NoteAPI
 // import noteController from "../../../../controllers/notesController";
 
 class Note extends Component {
@@ -20,6 +21,7 @@ class Note extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("Form submitted", this.state.title);
+
     // routes need to be added to routes folder, server needs to use them.
     // here goes the create note document function.
     // DicAPI.searchWord(this.state.search)
