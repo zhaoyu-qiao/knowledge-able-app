@@ -3,11 +3,11 @@ import axios from "axios";
 export default {
   getNote: function(id) {
     // get a specific note by its id?
-    // return axios.get("api/notes/"+ id);
+    return axios.get("api/notes/" + id);
   },
   // Saves a book to the database
   saveNote: function(noteData) {
-    return axios.post("/api/notes", noteData).then(result => result);
+    return axios.post("/api/notes", noteData).then(res => res.data);
   },
   // Deletes the book with the given id
   deleteNote: function(id) {
