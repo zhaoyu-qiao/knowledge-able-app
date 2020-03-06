@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../GeneralForm/index";
 import NoteAPI from "../../utils/NoteAPI";
+//import { restart } from "nodemon";
 class Note extends Component {
   state = {
     notes: [],
+    note: {},
     comment: "",
     title: "",
     link: ""
@@ -21,13 +23,28 @@ class Note extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("Form submitted", this.state.title);
-    NoteAPI.saveNote({
-      title: this.state.title,
-      link: this.state.link,
-      comment: this.state.comment
-    })
-      .then(() => console.log)
-      .catch(err => console.log(err));
+    const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    const regex = new RegExp(expression);
+    if (this.state.link.match(regex)) {
+      NoteAPI.saveNote({
+        title: this.state.title,
+        link: this.state.link,
+        comment: this.state.comment
+      })
+        .then(res => {
+          alert("Your note is saved!");
+          console.log("response", res);
+          this.setState({
+            note: res || ["no results"],
+            comment: res.comment,
+            title: res.title,
+            link: res.link
+          });
+        })
+        .catch(err => console.log(err));
+    } else {
+      alert("Please insert a valid url.:)");
+    }
   };
 
   // handle input
@@ -84,9 +101,25 @@ class Note extends Component {
               textAlign: "left"
             }}
           >
-            {" "}
-            Note Result{" "}
+            Your Current Note:
           </h4>
+          <div>
+            <p>
+              <b>Title: </b>
+              {this.state.title}
+            </p>
+            <p>
+              <b>Link: </b>
+              {this.state.link}
+            </p>
+            <p>
+              <b>Comment: </b>
+              {this.state.comment}
+            </p>
+          </div>
+          <a href="/notes" class="button">
+            Check all notes here
+          </a>
         </div>
       </div>
     );
