@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../GeneralForm/index";
 import NoteAPI from "../../utils/NoteAPI";
-//import { restart } from "nodemon";
+import { Modal, Button } from "react-bootstrap";
+
 class Note extends Component {
   state = {
     notes: [],
