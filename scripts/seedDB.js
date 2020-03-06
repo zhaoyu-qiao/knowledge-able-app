@@ -40,10 +40,10 @@ db.Book.remove({})
 
 const noteSeed = [
   {
-    comment: "This is a test comment",
-    title: "Test title",
+    comment: "Check this out for help center in MA. - Jo",
+    title: "Dyslexia help center",
     link:
-      "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
+      "https://massachusettsdyslexiacenter.com/?gclid=EAIaIQobChMIysqF4dmE6AIVBp6fCh1xDgzFEAAYASAAEgI0u_D_BwE"
   }
 ];
 
