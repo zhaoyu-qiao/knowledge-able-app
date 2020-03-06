@@ -95,7 +95,7 @@ function Navbar() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Note
+              Add a Note
             </button>
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
             <div className="dropdown-menu p-4" style={{ overflowY: "scroll" }}>
@@ -103,6 +103,18 @@ function Navbar() {
             </div>
           </div>
 
+          <li className="nav-item">
+            <Link
+              to="/notes"
+              className={
+                window.location.pathname === "/notes"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Notes
+            </Link>
+          </li>
           {/*SignIn SignUp Forms. */}
           <li className="nav-item">
             <Link className="nav-link" to="/signup">
