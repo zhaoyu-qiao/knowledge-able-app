@@ -1,18 +1,75 @@
 import React from "react";
 import "./style.css";
+import Row from "../Row";
+import Col from "../Col";
 
 //// This Form component is the search "form" page (Your Learning Journey) ////
 
 function Form(props) {
   return (
     <div className="container search-form">
+      {/* ****** What Are Learning Disabilities Section ****** */}
+      <Row>
+        <Col size="md-6">
+          <div className="what-are-lds">
+            <h2 className="text-center">What Are Learning Disabilities?</h2>
+
+            <br />
+
+            <iframe
+              width="500"
+              height="325"
+              src="https://www.youtube.com/embed/RKCNqHEzLwQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </Col>
+        <Col size="md-6">
+          <br />
+          <div>
+            {/* Cited: www.web.md */}
+            <h5 className="text-justified">
+              <b className="text-info">A learning disability is </b> a problem
+              that affects how a person receives and processes information.
+              People with learning disabilities may have trouble with any of the
+              following: Reading, Writing, Doing math, Understanding directions.
+            </h5>
+
+            <br />
+            <br />
+
+            {/* Cited: www.web.md */}
+            <h5 className="text-justified">
+              <b className="text-info">Learning disabilities have </b>nothing to
+              do with how smart a person is. Rather, a person with a learning
+              disability may just see, hear, or understand things differently.
+              That can make everyday tasks, such as studying for a test or
+              staying focused in class, much more difficult. There are
+              strategies a person can learn to make it easier to cope with these
+              differences. Please see our below Learning to Cope section to
+              learn how you can cope with your learning disability.
+            </h5>
+          </div>
+        </Col>
+      </Row>
+
+      <br />
+
+      {/* ****** Six Common Learning Disabilities Section ****** */}
+
       <h2 className="text-center">Common Learning Disabilities</h2>
+
       <br />
+
       <h4 className="text-center">
-        See the below images for our suggested resources on the learning
-        disability
+        See the below six images for our suggested resources on the common
+        learning disability
       </h4>
+
       <br />
+
       <form className="search">
         {/* ****** The learning disability cards ****** */}
         <div className="search-form-cards w-auto p-3 col-md-12">
@@ -214,6 +271,63 @@ function Form(props) {
             </div>
           </a> */}
         </div>
+
+        <br />
+
+        {/* ****** Coping With Learning Disabilities Section ****** */}
+        <Row>
+          <Col size="md-12">
+            <div className="coping-container">
+              <h2 className="text-center">Learning to Cope</h2>
+              <h4 className="text-center">
+                Here are four ways to cope with your learning disability
+              </h4>
+              <div
+                className="text-justified border-info mb-3"
+                style={{ maxWidth: 18 + "rem" }}
+              >
+                {/* Cited: https://www.talkspace.com/blog/learning-disabilities-school-stress/ */}
+                <b className="text-info card-header"> Understand Yourself </b>
+                <br />
+                <br />
+                <p className="text-justified card-text">
+                  Get a good current evaluation to know your diagnosis,
+                  strengths, and needs. If you’ve already had one done, make
+                  sure you understand the results and any recommendations made.
+                  The evaluator should be able to give you an explanation. In
+                  some cases, the evaluator can also make specific
+                  recommendations to address your learning problems.
+                </p>
+              </div>
+              <br />
+              <i className="fa fa-arrow-right text-info "></i>
+              <b className="text-info">Know your rights. </b> If you have a
+              diagnosed learning disability, you may qualify for accommodations
+              or specialized instruction, even in a college or work setting.
+              <a
+                href="https://www.ncld.org/"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                Click here to Learn More About Your Rights.
+              </a>
+              <br />
+              <i className="fa fa-arrow-right text-info "></i>{" "}
+              <b className="text-info">Get the help you need.</b> You are on the
+              right track by being on this site! Ask for a meeting with your
+              educators or employers to discuss your needs. Your school and or
+              employer may also be required to provide accommodations for you.
+              <br />
+              <b className="text-info">Assess and treat other problems.</b>
+              Because having a learning disability raises your risk for other
+              mental health conditions, consider talking with a mental health
+              professional. You may benefit from a screening to make sure
+              there’s nothing else going on. This is especially important if
+              you’re experiencing stress because of the learning disability.
+              Outside support can be essential for good stress management.
+            </div>
+          </Col>
+        </Row>
 
         <br />
 
