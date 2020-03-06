@@ -19,11 +19,11 @@ class Signup extends Component {
     };
   }
 
-  componentDidMount() {
-    if (this.Auth.loggedIn()) {
-      this.props.history.replace("/");
-    }
-  }
+  // componentDidMount() {
+  //   if (this.Auth.loggedIn()) {
+  //     this.props.history.replace("/");
+  //   }
+  // }
 
   handleFormSubmit = event => {
     event.preventDefault();
