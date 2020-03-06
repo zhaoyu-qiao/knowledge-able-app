@@ -8,7 +8,7 @@ class Login extends Component {
     this.Auth = new AuthService();
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (this.Auth.loggedIn()) {
       this.props.history.replace("/");
     }
@@ -17,10 +17,11 @@ class Login extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
-    this.Auth.login(this.state.email, this.state.password)
+    this.Auth.login(this.state.username, this.state.password)
       .then(res => {
         // once user is logged in
         // take them to their profile page
+        console.log("Logged In", this.state.username);
         this.props.history.replace("/");
       })
       .catch(err => {
@@ -51,20 +52,21 @@ class Login extends Component {
 
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
-            <label htmlFor="email" className="text-info">
-              Email:
+            <label htmlFor="username" className="text-info">
+              Username:
             </label>
             <input
               className="form-control"
-              placeholder="Email"
-              name="email"
-              type="email"
-              id="email"
+              placeholder="Username"
+              name="username"
+              type="text"
+              id="username"
+              required
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="pwd" className="text-info">
+            <label htmlFor="password" className="text-info">
               Password:
             </label>
             <input
@@ -73,6 +75,7 @@ class Login extends Component {
               name="password"
               type="password"
               id="pwd"
+              required
               onChange={this.handleChange}
             />
           </div>

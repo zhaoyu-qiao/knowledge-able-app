@@ -114,6 +114,10 @@ function Navbar() {
               SignIn
             </Link>
           </li>
+
+          <div>
+            {/* {this.state.loggedIn && <p>Hi, {this.state.username}!</p>})   */}
+          </div>
         </ul>
       </div>
     </nav>
