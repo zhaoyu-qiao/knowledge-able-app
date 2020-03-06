@@ -7,7 +7,7 @@ router
   .get(notesController.findAll)
   .post(notesController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/notes/:id"
 router
   .route("/:id")
   .get(notesController.findById)

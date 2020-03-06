@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../components/AuthService";
+import { FormErrors } from "../components/SignUpErrors/formErrors";
 // import SignInSignUp from "../components/SignInSignUp";
 import API from "./../utils/API";
 
@@ -8,6 +9,14 @@ class Signup extends Component {
   constructor() {
     super();
     this.Auth = new AuthService();
+    this.state = {
+      email: "",
+      password: "",
+      formErrors: { email: "", password: "" },
+      emailValid: false,
+      passwordValid: false,
+      formValid: false
+    };
   }
 
   componentDidMount() {
@@ -29,10 +38,50 @@ class Signup extends Component {
 
   handleChange = event => {
     const { name, value } = event.target;
-    this.setState({
-      [name]: value
+    this.setState({ [name]: value }, () => {
+      this.validateField(name, value);
     });
   };
+
+  // Email and password validation on user input. Cited: https://learnetto.com/blog/react-form-validation
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors;
+    let emailValid = this.state.emailValid;
+    let passwordValid = this.state.passwordValid;
+
+    switch (fieldName) {
+      case "email":
+        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+        fieldValidationErrors.email = emailValid ? "" : " is invalid ";
+        break;
+      case "password":
+        passwordValid = value.length >= 8;
+        fieldValidationErrors.password = passwordValid
+          ? ""
+          : " is invalid, must contain a minimum of eight characters in length ";
+        break;
+      default:
+        break;
+    }
+    this.setState(
+      {
+        formErrors: fieldValidationErrors,
+        emailValid: emailValid,
+        passwordValid: passwordValid
+      },
+      this.validateForm
+    );
+  }
+
+  validateForm() {
+    this.setState({
+      formValid: this.state.emailValid && this.state.passwordValid
+    });
+  }
+
+  errorClass(error) {
+    return error.length === 0 ? "" : "has-error";
+  }
 
   render() {
     return (
@@ -46,6 +95,11 @@ class Signup extends Component {
       >
         <h1 className="text-info">SignUp</h1>
         <br />
+        {/* <div className="panel panel-default">
+          <p className="text-danger">
+            <FormErrors formErrors={this.state.formErrors} />
+          </p>
+        </div> */}
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="username" className="text-info">
@@ -57,11 +111,16 @@ class Signup extends Component {
               name="username"
               type="text"
               id="username"
+              required
               onChange={this.handleChange}
             />
           </div>
 
-          <div className="form-group">
+          <div
+            className={`form-group ${this.errorClass(
+              this.state.formErrors.email
+            )}`}
+          >
             <label htmlFor="email" className="text-info">
               Email:
             </label>
@@ -71,10 +130,15 @@ class Signup extends Component {
               name="email"
               type="email"
               id="email"
+              required
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div
+            className={`form-group ${this.errorClass(
+              this.state.formErrors.password
+            )}`}
+          >
             <label htmlFor="pwd" className="text-info">
               Password:
             </label>
@@ -84,9 +148,17 @@ class Signup extends Component {
               name="password"
               type="password"
               id="pwd"
+              required
               onChange={this.handleChange}
             />
           </div>
+
+          <div className="panel panel-default">
+            <p className="text-danger">
+              <FormErrors formErrors={this.state.formErrors} />
+            </p>
+          </div>
+
           <button type="submit" className="btn btn-primary">
             Submit
           </button>

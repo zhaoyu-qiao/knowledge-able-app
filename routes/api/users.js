@@ -6,7 +6,7 @@ const usersController = require("../../controllers/usersController");
 // // LOGIN ROUTE
 router.route("/login").post((req, res) => {
   auth
-    .logUserIn(req.body.email, req.body.password)
+    .logUserIn(req.body.username, req.body.password)
     .then(dbUser => res.json(dbUser))
     .catch(err => res.status(400).json(err));
 });

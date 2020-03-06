@@ -3,7 +3,6 @@ import { Input, FormBtn } from "../GeneralForm/index";
 import NoteAPI from "../../utils/NoteAPI";
 import { Modal, Button } from "react-bootstrap";
 
-//import { restart } from "nodemon";
 class Note extends Component {
   state = {
     notes: [],

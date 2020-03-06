@@ -42,6 +42,7 @@ class Results extends Component {
         )
         .catch(err => console.error(err));
     } else {
+      console.log("book", book);
       API.saveBook(book)
         .then(savedBook =>
           this.setState({

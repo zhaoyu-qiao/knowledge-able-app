@@ -1,11 +1,11 @@
 import decode from "jwt-decode";
 import axios from "axios";
 export default class AuthService {
-  login = (email, password) => {
+  login = (username, password) => {
     // Get a token
     return axios
-      .post("http://localhost:3001/api/users/login", {
-        email: email,
+      .post("http://localhost:3000/api/users/login", {
+        username: username,
         password: password
       })
       .then(res => {

@@ -12,6 +12,7 @@ export default {
   },
   // Saves a book to the database
   saveBook: function(bookData) {
+    console.log("book data", bookData);
     return axios.post("/api/books", bookData).then(result => result.data);
   },
   // Deletes the book with the given id
