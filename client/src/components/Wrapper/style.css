@@ -1,9 +1,10 @@
 .wrapper {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  height: 300%;
 
- /* margin-top: 800px; */
- /* overflow-y: scroll;
+  /* margin-top: 800px; */
+  /* overflow-y: scroll;
  scroll-snap-type: mandatory;
  scroll-snap-points-y: repeat (3rem);
  scroll-snap-type: y mandatory; */
