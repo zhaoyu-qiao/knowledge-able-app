@@ -18,7 +18,18 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  // `notes` is an array that stores ObjectIds
+  // The ref property links these ObjectIds to the Note model
+  // This allows us to populate the User with any associated Notes
+  notes: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the Note model
+      ref: "Note"
+    }
+  ]
 });
 // // Execute before each user.save() call
 UserSchema.pre("save", function(callback) {
