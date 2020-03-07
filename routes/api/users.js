@@ -5,6 +5,7 @@ const usersController = require("../../controllers/usersController");
 
 // // LOGIN ROUTE
 router.route("/login").post((req, res) => {
+  console.log("IN HERE");
   auth
     .logUserIn(req.body.username, req.body.password)
     .then(dbUser => res.json(dbUser))
