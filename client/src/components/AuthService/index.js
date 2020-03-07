@@ -4,7 +4,7 @@ export default class AuthService {
   login = (username, password) => {
     // Get a token
     return axios
-      .post("http://localhost:3000/api/users/login", {
+      .post("/api/users/login", {
         username: username,
         password: password
       })
