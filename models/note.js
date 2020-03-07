@@ -2,20 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const noteSchema = new Schema({
-
   title: { type: String },
-  link: {
-    type: String
-    // validator: [
-    //   validators.isURL({
-    //     message: "Must be a Valid URL",
-    //     protocols: ["http", "https", "ftp"],
-    //     require_tld: true,
-    //     require_protocol: true
-    //   })
-    // ]
-  },
+  link: { type: String },
   comment: { type: String }
+  // user: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "User"
+  // }
 });
 
 const Note = mongoose.model("Note", noteSchema);
