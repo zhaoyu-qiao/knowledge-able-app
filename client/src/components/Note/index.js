@@ -96,7 +96,14 @@ function Note(props) {
         >
           <Modal.Body>
             <span style={{ float: "left" }}>{message}</span>
-            <Button style={{ float: "right" }} onClick={handleClose}>
+            <Button
+              style={{
+                float: "right",
+                backgroundColor: "#17a2b8",
+                borderColor: "#17a2b8"
+              }}
+              onClick={handleClose}
+            >
               {" "}
               Close{" "}
             </Button>
