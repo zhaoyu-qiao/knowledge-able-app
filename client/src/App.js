@@ -15,15 +15,6 @@ import NotePage from "./pages/NotePage";
 // import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
-  state = {
-    isAuthed: false
-  };
-
-  // toggle function to switch between, If a user is logged in, display the logout link. If no user is logged in, then display the sign up and sign in links.
-  toggle = (name, value) => {
-    this.setState({ [name]: value });
-  };
-
   render() {
     return (
       <Router>
@@ -36,13 +27,7 @@ class App extends Component {
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
             <Route exact path="/dictionary" component={Dictionary} />
-            <Route
-              exact
-              path="/login"
-              render={() => (
-                <Login toggle={this.toggle} isAuthed={this.state.isAuthed} />
-              )}
-            />
+            <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/notes" component={NotePage} />
 

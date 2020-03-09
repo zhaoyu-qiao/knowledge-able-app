@@ -6,7 +6,6 @@ class Login extends Component {
   constructor() {
     super();
     this.Auth = new AuthService();
-    // let history = useHistory();
   }
 
   // componentDidMount() {
@@ -21,18 +20,13 @@ class Login extends Component {
     this.Auth.login(this.state.username, this.state.password)
       .then(res => {
         // once user is logged in
-        // take them to the About page
-        this.setState({
-          isAuthe: true
-        });
+        // take them to their profile page
         console.log("Logged In", this.state.username);
-        // this.props.history.replace("/");
-        // history.push("/");
-        window.location.reload("/");
+        this.props.history.replace("/");
       })
       .catch(err => {
         // alert(err.response.data.message);
-        console.log(err);
+        alert(err);
       });
   };
 
@@ -44,24 +38,24 @@ class Login extends Component {
   };
 
   render() {
-    console.log("render props", this.props);
     return (
       <div
         className="container"
         style={{
           paddingTop: "8" + "rem",
           paddingBottom: "13" + "rem",
-          maxWidth: "600" + "px"
+          maxWidth: "960" + "px"
         }}
       >
-        <h1 className="text-info text-center">SignIn</h1>
+        <h1 className="text-info">SignIn</h1>
 
         <br />
 
         <form onSubmit={this.handleFormSubmit}>
-          {/* <form onSubmit={this.props.handleLoginSubmit}> */}
           <div className="form-group">
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username" className="text-info">
+              Username:
+            </label>
             <input
               className="form-control"
               placeholder="Username"
@@ -73,7 +67,9 @@ class Login extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className="text-info">
+              Password:
+            </label>
             <input
               className="form-control"
               placeholder="Password"
@@ -84,14 +80,14 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <button type="submit" className="btn btn-info btn-lg btn-block">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>
 
         <br />
 
-        <p className="text-center">
+        <p>
           <Link to="/signup">Don't have an Account? SignUp</Link>
         </p>
       </div>
