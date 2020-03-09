@@ -22,6 +22,9 @@ class Login extends Component {
         // once user is logged in
         // take them to their profile page
         console.log("Logged In", this.state.username);
+        // add username to localStorage.
+        // ???
+        localStorage.setItem("username", this.state.username);
         this.props.history.replace("/");
       })
       .catch(err => {

@@ -10,7 +10,7 @@ export default class AuthService {
         password: password
       })
       .then(res => {
-        // TODO: save username to localStorage?
+        // TODO: save username to localStorage? This can be handled in login page
         console.log(res.data);
         // set the token once the user logs in
         this.setToken(res.data.token);
