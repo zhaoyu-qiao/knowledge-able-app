@@ -12,7 +12,6 @@ router
   .route("/:id")
   .get(notesController.findById)
   .put(notesController.update)
-  .post(notesController.create)
   .delete(notesController.remove);
 
 module.exports = router;

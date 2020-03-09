@@ -23,8 +23,6 @@ function Note(props) {
     const regex = new RegExp(expression);
     if (link.match(regex)) {
       NoteAPI.saveNote({
-        // Post also user's information like name or email to the route too.
-        // so that you can look for that user in the controller.
         title: title,
         link: link,
         comment: comment

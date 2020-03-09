@@ -3,7 +3,6 @@
 const db = require("../models");
 
 // Defining methods for the usersController
-// TODO:Should there be a sign in method here?
 module.exports = {
   signUp: function(req, res) {
     console.log(req.body);

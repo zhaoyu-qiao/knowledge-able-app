@@ -3,15 +3,12 @@ import axios from "axios";
 export default class AuthService {
   login = (username, password) => {
     // Get a token
-
     return axios
       .post("/api/users/login", {
         username: username,
         password: password
       })
       .then(res => {
-        // TODO: save username to localStorage?
-        console.log(res.data);
         // set the token once the user logs in
         this.setToken(res.data.token);
         // return the rest of the response
@@ -51,16 +48,10 @@ export default class AuthService {
     return localStorage.getItem("id_token");
   }
 
-  // TODO:set and get of username
-  // setUsername() {}
-
-  // getUsername() {}
-
   logout() {
     // Clear user token and profile data from localStorage
     axios.defaults.headers.common["Authorization"] = null;
-    // localStorage.removeItem("id_token");
-    localStorage.clear();
+    localStorage.removeItem("id_token");
     // this will reload the page and reset the state of the application
     window.location.reload("/");
   }

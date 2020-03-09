@@ -5,8 +5,10 @@ import Dictionary from "../Dictionary/index";
 import Note from "../Note/index";
 // This is for scrolling feature
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
-import "./style.css";
+
 import AuthService from "../AuthService";
+import Logout from "../Logout/index";
+import "./style.css";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
 
@@ -115,17 +117,27 @@ function Navbar() {
               Notes
             </Link>
           </li>
-          {/*SignIn SignUp Forms. */}
-          <li className="nav-item">
-            <Link className="nav-link" to="/signup">
-              SignUp
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/login">
-              SignIn
-            </Link>
-          </li>
+
+          {/* If there is an id token in localStorage indicating that a user is logged in, display the logout link. If no user is logged in, then display the sign up and sign in links */}
+          {localStorage.getItem("id_token") ? (
+            <div>
+              <Logout />
+            </div>
+          ) : (
+            //  {/*SignIn SignUp Forms. */}
+            <React.Fragment>
+              <li className="nav-item">
+                <Link className="nav-link" to="/signup">
+                  SignUp
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  SignIn
+                </Link>
+              </li>
+            </React.Fragment>
+          )}
 
           <div>
             {/* {this.state.loggedIn && <p>Hi, {this.state.username}!</p>})   */}
