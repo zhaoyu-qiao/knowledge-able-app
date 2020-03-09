@@ -90,10 +90,10 @@ class Signup extends Component {
         style={{
           paddingTop: "8" + "rem",
           paddingBottom: "8" + "rem",
-          maxWidth: "600" + "px"
+          maxWidth: "960" + "px"
         }}
       >
-        <h1 className="text-info text-center">SignUp</h1>
+        <h1 className="text-info">SignUp</h1>
         <br />
         {/* <div className="panel panel-default">
           <p className="text-danger">
@@ -102,7 +102,9 @@ class Signup extends Component {
         </div> */}
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username" className="text-info">
+              Username:
+            </label>
             <input
               className="form-control"
               placeholder="Username"
@@ -119,7 +121,9 @@ class Signup extends Component {
               this.state.formErrors.email
             )}`}
           >
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="text-info">
+              Email:
+            </label>
             <input
               className="form-control"
               placeholder="example@gmail.com"
@@ -135,7 +139,9 @@ class Signup extends Component {
               this.state.formErrors.password
             )}`}
           >
-            <label htmlFor="pwd">Password:</label>
+            <label htmlFor="pwd" className="text-info">
+              Password:
+            </label>
             <input
               className="form-control"
               placeholder="Password"
@@ -153,14 +159,14 @@ class Signup extends Component {
             </p>
           </div>
 
-          <button type="submit" className="btn btn-info btn-lg btn-block">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>
         <br />
 
         {/* <SignInSignUp> */}
-        <p className="text-center">
+        <p>
           <Link to="/login">Already have an account? SignIn</Link>
         </p>
         {/* </SignInSignUp> */}
