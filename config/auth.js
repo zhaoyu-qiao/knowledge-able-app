@@ -15,7 +15,7 @@ module.exports = {
               let token = jwt.sign(
                 { id: user._id, username: user.username },
                 process.env.SERVER_SECRET,
-                { expiresIn: 54000 }
+                { expiresIn: 129600 }
               ); // Sigining the token
               resolve({
                 success: true,

@@ -275,56 +275,130 @@ function Form(props) {
         <br />
 
         {/* ****** Coping With Learning Disabilities Section ****** */}
+        {/* Cited: https://www.talkspace.com/blog/learning-disabilities-school-stress/ */}
         <Row>
           <Col size="md-12">
             <div className="coping-container">
-              <h2 className="text-center">Learning to Cope</h2>
+              <h1 className="text-center">Learning to Cope</h1>
+              <br />
               <h4 className="text-center">
                 Here are four ways to cope with your learning disability
               </h4>
-              <div
-                className="text-justified border-info mb-3"
-                style={{ maxWidth: 18 + "rem" }}
-              >
-                {/* Cited: https://www.talkspace.com/blog/learning-disabilities-school-stress/ */}
-                <b className="text-info card-header"> Understand Yourself </b>
+
+              <br />
+              <br />
+
+              <div className="list-group" data-spy="scroll">
+                <div className="list-group-item border-10 border-info">
+                  <div className="d-flex w-100 justify-content-between">
+                    <h4 className="mb-3 text-center text-light">
+                      <span className="badge badge-warning badge-pill">1</span>
+                      Understand Yourself{" "}
+                    </h4>
+                  </div>
+                  <h5 className="mb-1 text-light">
+                    Get a good current evaluation to know your diagnosis,
+                    strengths, and needs. If you’ve already had one done, make
+                    sure you understand the results and any recommendations
+                    made. The evaluator should be able to give you an
+                    explanation. In some cases, the evaluator can also make
+                    specific recommendations to address your learning problems.
+                  </h5>
+                  <br />
+
+                  <a
+                    href="https://www.additudemag.com/self-test-for-dyscalculia-in-adults/"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-info text-center"
+                  >
+                    Free Online Evaluations For Adults
+                  </a>
+                  <br />
+                  <br />
+
+                  <a
+                    href="https://www.lexercise.com/tests"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-info"
+                  >
+                    Free Online Evaluations For Children
+                  </a>
+                </div>
                 <br />
+
+                <div className="list-group-item border-10 border-info">
+                  <div className="d-flex w-100 justify-content-between">
+                    <h4 className="mb-3 text-center text-light">
+                      <span className="badge badge-warning badge-pill">2</span>
+                      Know Your Rights
+                    </h4>
+                  </div>
+                  <h5 className="mb-1 text-light">
+                    If you have a diagnosed learning disability, you may qualify
+                    for accommodations or specialized instruction, even in a
+                    college or work setting.
+                  </h5>
+
+                  <br />
+
+                  <a
+                    href="https://www.ncld.org/"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-info text-center"
+                  >
+                    Click here to Learn More About Your Rights
+                  </a>
+                </div>
+
                 <br />
-                <p className="text-justified card-text">
-                  Get a good current evaluation to know your diagnosis,
-                  strengths, and needs. If you’ve already had one done, make
-                  sure you understand the results and any recommendations made.
-                  The evaluator should be able to give you an explanation. In
-                  some cases, the evaluator can also make specific
-                  recommendations to address your learning problems.
-                </p>
+
+                <div className="list-group-item border-10 border-info">
+                  <div className="d-flex w-100 justify-content-between">
+                    <h4 className="mb-3 text-center text-light">
+                      <span className="badge badge-warning badge-pill">3</span>
+                      Get The Help You Need
+                    </h4>
+                  </div>
+                  <h5 className="mb-1 text-light">
+                    You are on the right track by being on this site! Ask for a
+                    meeting with your educators or employers to discuss your
+                    needs. Your school and or employer may also be required to
+                    provide accommodations for you.
+                  </h5>
+                </div>
+
+                <br />
+
+                <div className="list-group-item border-10 border-info">
+                  <div className="d-flex w-100 justify-content-between">
+                    <h4 className="mb-3 text-center text-light">
+                      <span className="badge badge-warning badge-pill">4</span>
+                      Assess And Treat Other Problems
+                    </h4>
+                  </div>
+                  <h5 className="mb-1 text-light">
+                    Because having a learning disability raises your risk for
+                    other mental health conditions, consider talking with a
+                    mental health professional. You may benefit from a screening
+                    to make sure there’s nothing else going on. This is
+                    especially important if you’re experiencing stress because
+                    of the learning disability. Outside support can be essential
+                    for good stress management.
+                  </h5>
+                  <br />
+                  <a
+                    href="https://www.nami.org/Find-Support/NAMI-HelpLine"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-info"
+                  >
+                    Contact the National Alliance For Mental Health
+                  </a>
+                </div>
               </div>
-              <br />
-              <i className="fa fa-arrow-right text-info "></i>
-              <b className="text-info">Know your rights. </b> If you have a
-              diagnosed learning disability, you may qualify for accommodations
-              or specialized instruction, even in a college or work setting.
-              <a
-                href="https://www.ncld.org/"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                Click here to Learn More About Your Rights.
-              </a>
-              <br />
-              <i className="fa fa-arrow-right text-info "></i>{" "}
-              <b className="text-info">Get the help you need.</b> You are on the
-              right track by being on this site! Ask for a meeting with your
-              educators or employers to discuss your needs. Your school and or
-              employer may also be required to provide accommodations for you.
-              <br />
-              <b className="text-info">Assess and treat other problems.</b>
-              Because having a learning disability raises your risk for other
-              mental health conditions, consider talking with a mental health
-              professional. You may benefit from a screening to make sure
-              there’s nothing else going on. This is especially important if
-              you’re experiencing stress because of the learning disability.
-              Outside support can be essential for good stress management.
             </div>
           </Col>
         </Row>

@@ -6,6 +6,7 @@ class Login extends Component {
   constructor() {
     super();
     this.Auth = new AuthService();
+    // let history = useHistory();
   }
 
   // componentDidMount() {
@@ -20,16 +21,18 @@ class Login extends Component {
     this.Auth.login(this.state.username, this.state.password)
       .then(res => {
         // once user is logged in
-        // take them to their profile page
+        // take them to the About page
+        this.setState({
+          isAuthe: true
+        });
         console.log("Logged In", this.state.username);
-        // add username to localStorage.
-        // ???
-        localStorage.setItem("username", this.state.username);
-        this.props.history.replace("/");
+        // this.props.history.replace("/");
+        // history.push("/");
+        window.location.reload("/");
       })
       .catch(err => {
         // alert(err.response.data.message);
-        alert(err);
+        console.log(err);
       });
   };
 
@@ -41,24 +44,24 @@ class Login extends Component {
   };
 
   render() {
+    console.log("render props", this.props);
     return (
       <div
         className="container"
         style={{
           paddingTop: "8" + "rem",
           paddingBottom: "13" + "rem",
-          maxWidth: "960" + "px"
+          maxWidth: "600" + "px"
         }}
       >
-        <h1 className="text-info">SignIn</h1>
+        <h1 className="text-info text-center">SignIn</h1>
 
         <br />
 
         <form onSubmit={this.handleFormSubmit}>
+          {/* <form onSubmit={this.props.handleLoginSubmit}> */}
           <div className="form-group">
-            <label htmlFor="username" className="text-info">
-              Username:
-            </label>
+            <label htmlFor="username">Username:</label>
             <input
               className="form-control"
               placeholder="Username"
@@ -70,9 +73,7 @@ class Login extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password" className="text-info">
-              Password:
-            </label>
+            <label htmlFor="password">Password:</label>
             <input
               className="form-control"
               placeholder="Password"
@@ -83,14 +84,14 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-info btn-lg btn-block">
             Submit
           </button>
         </form>
 
         <br />
 
-        <p>
+        <p className="text-center">
           <Link to="/signup">Don't have an Account? SignUp</Link>
         </p>
       </div>
