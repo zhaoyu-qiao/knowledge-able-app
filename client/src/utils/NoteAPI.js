@@ -14,9 +14,10 @@ export default {
     return axios.delete("/api/notes/" + id);
   },
   // Get the saved a books from the database
-  savedNotes: function(username) {
+  savedNotes: function() {
     return axios.get("/api/notes").then(result => result.data);
   },
+
   userNotes: function(username) {
     return axios.get("/api/notes/:username").then(result => result.data);
   }

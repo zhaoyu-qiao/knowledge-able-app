@@ -15,4 +15,12 @@ router
   .post(notesController.create)
   .delete(notesController.remove);
 
+// Matches with "/api/notes/:username"
+router
+  .route("/:username")
+  .get(notesController.findByUsername)
+  .put(notesController.update)
+  .post(notesController.create)
+  .delete(notesController.remove);
+
 module.exports = router;
