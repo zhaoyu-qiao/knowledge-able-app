@@ -4,22 +4,30 @@ import NoteAPI from "../utils/NoteAPI";
 
 class NotePage extends Component {
   state = {
-    savedNotes: []
+    userNotes: [],
+    username: ""
   };
 
-  componentDidMount() {
-    this.loadSavedNotes();
+  getUsername() {
+    const username = localStorage.getItem("username");
+    // after username is set in the state, call function to load the books related to this user.
+    this.setState({ username: username }, () => this.loadUserNotes());
   }
 
-  loadSavedNotes = () => {
-    NoteAPI.savedNotes()
-      .then(savedNotes => this.setState({ savedNotes: savedNotes }))
+  componentDidMount() {
+    this.getUsername();
+  }
+
+  loadUserNotes = () => {
+    console.log("STATE: ", this.state);
+    NoteAPI.userNotes(this.state.username)
+      .then(userNotes => this.setState({ userNotes: userNotes }))
       .catch(err => console.error(err));
   };
 
   handleDelete = id => {
     NoteAPI.deleteNote(id)
-      .then(res => this.loadSavedNotes())
+      .then(res => this.loadUserNotes())
       .catch(err => console.log(err));
   };
   render() {
@@ -29,7 +37,7 @@ class NotePage extends Component {
         <br />
         {/* <img src="..." className="img-fluid" alt="Responsive image"></img> */}
         <div>
-          {this.state.savedNotes.map(result => (
+          {this.state.userNotes.map(result => (
             <div className="card mb-3 border" key={result._id}>
               <div className="row">
                 {/* <div className="col-md-2">

@@ -16,6 +16,7 @@ function Note(props) {
   const [comment, setComment] = useState("");
   const [link, setLink] = useState("");
 
+  const username = localStorage.getItem("username");
   const handleFormSubmit = event => {
     event.preventDefault();
     console.log("Form submitted", title);
@@ -23,6 +24,7 @@ function Note(props) {
     const regex = new RegExp(expression);
     if (link.match(regex)) {
       NoteAPI.saveNote({
+        username: username,
         title: title,
         link: link,
         comment: comment

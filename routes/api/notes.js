@@ -7,10 +7,10 @@ router
   .get(notesController.findAll)
   .post(notesController.create);
 
-// Matches with "/api/notes/:id"
+// Matches with "/api/notes/:id" or "/api/notes/:username"
 router
-  .route("/:id")
-  .get(notesController.findById)
+  .route("/:username")
+  .get(notesController.findByUsername)
   .put(notesController.update)
   .delete(notesController.remove);
 
