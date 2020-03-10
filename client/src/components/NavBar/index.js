@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Browsealoud from "../Browsealoud/index";
@@ -16,13 +17,17 @@ function Navbar() {
   const Auth = new AuthService();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-info bg-info fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-info bg-info fixed-top">
       <Link className="navbar-brand" to="/">
         Knowledge-ABLE
       </Link>
 
-      <div>
-        <ul className="navbar-nav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link
               to="/"
@@ -149,3 +154,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
