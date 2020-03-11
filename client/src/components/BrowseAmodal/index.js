@@ -6,7 +6,7 @@ import IntroBA from "../IntroBA";
 
 // Cited: https://www.npmjs.com/package/react-responsive-modal
 
-class BrowseAmodal extends React.Component {
+class LoginModal extends React.Component {
   state = {
     open: false
   };
@@ -42,4 +42,4 @@ class BrowseAmodal extends React.Component {
   }
 }
 
-export default BrowseAmodal;
+export default LoginModal;

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import AuthService from "../components/AuthService";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class Login extends Component {
   constructor() {
     super();
     this.Auth = new AuthService();
-    // let history = useHistory();
+    this.state = { redirect: null };
   }
 
   // componentDidMount() {
@@ -20,17 +20,17 @@ class Login extends Component {
 
     this.Auth.login(this.state.username, this.state.password)
       .then(res => {
+        // console.log(res);
+        this.props.toggle("user", res.data.user);
         // once user is logged in
         // take them to the About page
-        this.setState({
-          isAuthe: true
-        });
+        // this.setState({
+        //   isAuthe: true
+        // });
         console.log("Logged In", this.state.username);
-        // ???
-        localStorage.setItem("username", this.state.username);
-        // this.props.history.replace("/");
-        // history.push("/");
-        window.location.reload("/");
+        // this.props.history.push("/");
+        // window.location.reload("/");
+        this.setState({ redirect: "/" });
       })
       .catch(err => {
         // alert(err.response.data.message);
@@ -47,12 +47,15 @@ class Login extends Component {
 
   render() {
     console.log("render props", this.props);
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />;
+    }
     return (
       <div
         className="container"
         style={{
           paddingTop: "8" + "rem",
-          paddingBottom: "13" + "rem",
+          paddingBottom: "10" + "rem",
           maxWidth: "600" + "px"
         }}
       >
@@ -61,7 +64,6 @@ class Login extends Component {
         <br />
 
         <form onSubmit={this.handleFormSubmit}>
-          {/* <form onSubmit={this.props.handleLoginSubmit}> */}
           <div className="form-group">
             <label htmlFor="username">Username:</label>
             <input

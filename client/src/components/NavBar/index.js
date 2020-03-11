@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
 import Note from "../Note/index";
-import LoginModal from "../LoginModal/index";
+import BrowseAmodal from "../BrowseAmodal/index";
 // This is for scrolling feature
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 
@@ -15,7 +14,7 @@ import IntroBA from "../IntroBA";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
 
-function Navbar() {
+function Navbar(props) {
   const Auth = new AuthService();
 
   return (
@@ -24,7 +23,12 @@ function Navbar() {
         Knowledge-ABLE
       </Link>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -127,8 +131,9 @@ function Navbar() {
 
           {/* If there is an id token in localStorage indicating that a user is logged in, display the logout link. If no user is logged in, then display the sign up and sign in links */}
           {localStorage.getItem("id_token") ? (
-            <div>
-              <Logout />
+            <div className="logout-link">
+              {/* Passing props from App.js to obtain the username if the user is logged in */}
+              <Logout user={props.user} />
             </div>
           ) : (
             //  {/*SignIn SignUp Forms. */}
@@ -148,7 +153,7 @@ function Navbar() {
 
           {/* The Introduction of Browsealoud dropdown menu */}
           <div>
-            <LoginModal />
+            <BrowseAmodal />
           </div>
         </ul>
       </div>
@@ -157,4 +162,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
