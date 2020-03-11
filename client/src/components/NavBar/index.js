@@ -62,7 +62,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              Materials
+              YouTube
             </Link>
           </li>
           {/* Browsealoud text to speech software: https://www.texthelp.com/en-us/products/browsealoud/ */}
