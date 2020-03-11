@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
 import Note from "../Note/index";
+import LoginModal from "../LoginModal/index";
 // This is for scrolling feature
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 
 import AuthService from "../AuthService";
 import Logout from "../Logout/index";
 import "./style.css";
+import IntroBA from "../IntroBA";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
 
@@ -139,8 +141,9 @@ function Navbar() {
             </React.Fragment>
           )}
 
+          {/* The Introduction of Browsealoud dropdown menu */}
           <div>
-            {/* {this.state.loggedIn && <p>Hi, {this.state.username}!</p>})   */}
+            <LoginModal />
           </div>
         </ul>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 // import ReactDOM from "react-dom";
 import Modal from "react-responsive-modal";
 import SignInSignUp from "../SignInSignUp/index";
+import IntroBA from "../IntroBA";
 
 // Cited: https://www.npmjs.com/package/react-responsive-modal
 
@@ -23,7 +24,7 @@ class LoginModal extends React.Component {
     return (
       <div>
         <button className="btn btn-info" onClick={this.onOpenModal}>
-          SignIn
+          BrowseAloud
         </button>
         <Modal
           open={open}
@@ -33,7 +34,7 @@ class LoginModal extends React.Component {
         >
           {/* <h2>Simple centered modal</h2> */}
           <div>
-            <SignInSignUp />
+            <IntroBA />
           </div>
         </Modal>
       </div>
