@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 300%;
+  height: 100%;
 
   /* margin-top: 800px; */
   /* overflow-y: scroll;

@@ -3,10 +3,21 @@ const router = require("express").Router();
 const apiRoutes = require("./api");
 const axios = require("axios");
 const API_KEY = process.env.REACT_APP_X_Mashape_Key;
+const YOUTUBE_API = process.env.REACT_APP_YOUTUBE_API;
 // API Routes
 console.log(API_KEY);
 router.use("/api", apiRoutes);
-
+router.get("/youtube/:query", (req, res) => {
+  let query =(req.params.query);
+const baseURL="https://www.googleapis.com/youtube/v3/search?part=snippet&q=";
+const appendix=`&maxResults=5&key=${YOUTUBE_API}`;
+axios.get(baseURL+query+appendix)
+.then(response => {
+  let videos = (response.data.items);
+  console.log(response.data.items)
+  res.json(videos);
+})
+})
 router.route("/search").post((req, res) => {
   // https://stackoverflow.com/questions/45578844/how-to-set-header-and-options-in-axios
   // https://www.wordsapi.com/docs/
