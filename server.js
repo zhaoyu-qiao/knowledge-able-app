@@ -1,5 +1,6 @@
 // Cited In class Activity: https://harvard.bootcampcontent.com/Harvard-Coding-Boot-Camp/hu-cam-fsf-pt-09-2019-u-c/tree/master/Week_20/20-react/01-Activities/11-Stu_ReactRouter/Solved
-require("dotenv").config();
+//require("dotenv").config();
+require('dotenv').config({ path: './.env' })
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");

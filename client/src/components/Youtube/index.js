@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./sytle.css"
 
-const API = "AIzaSyDgSKEmBRSqxlq2JEtmWyNWhtvYhK8oQgI";
+const YOUTUBE_API= process.env.REACT_APP_YOUTUBE_API;
 const result = 5;
 
 const baseURL="https://www.googleapis.com/youtube/v3/search?part=snippet&q=";
-const appendix=`&maxResults=${result}&key=${API}`;
+const appendix=`&maxResults=${result}&key=${YOUTUBE_API}`;
 // let finalURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.query}&maxResults=${result}&key=${API}`;
 
 class Youtube extends Component {
@@ -22,18 +22,17 @@ class Youtube extends Component {
       let temp=e.target.value;
       console.log(temp);
       this.setState({query:temp});
-    fetch(baseURL+temp+appendix)
-      .then(response => response.json())
+      fetch("/youtube/" + temp)
+    
+       .then(response => response.json())
       .then(responseJson => {
-        //console.log(responseJson)
-        const resultyt = responseJson.items.map(
+        console.log(responseJson)
+        const resultyt = responseJson.map(
           obj => "https://www.youtube.com/embed/" + obj.id.videoId
         );
         this.setState({ resultyt });
-      })
-      .catch(error => {
-        console.error(error);
-      });
+       })
+ 
   }
 
   render() {
