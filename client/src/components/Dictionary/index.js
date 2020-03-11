@@ -92,7 +92,7 @@ class Dictionary extends Component {
                 Object.keys(this.state.pronunciation).map(key => (
                   <div>
                     <p>
-                      <span className="text-info">Pronunciation-{key}</span>:{" "}
+                      <span className="text-info">Pronunciation-{key} </span>:{" "}
                       {this.state.pronunciation[key]}
                     </p>
                   </div>
@@ -100,7 +100,7 @@ class Dictionary extends Component {
               ) : (
                 <div>
                   <p>
-                    <span className="text-info">Pronunciation</span>:{" "}
+                    <span className="text-info">Pronunciation </span>:{" "}
                     {this.state.pronunciation}
                   </p>
                 </div>
@@ -109,12 +109,12 @@ class Dictionary extends Component {
                 <div>
                   <hr />
                   <p>
-                    <span className="text-info">Definition{index + 1}</span>:
+                    <span className="text-info">Definition {index + 1} </span>:
                     {result.definition || "Not defined"}
                   </p>
 
                   <p>
-                    <span className="text-info">Part Of Speech</span> :
+                    <span className="text-info">Part Of Speech </span>:
                     {result.partOfSpeech || "Not listed"}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ class Dictionary extends Component {
             </div>
           ) : (
             <div>
-              <div> No Results Found </div>
+              <div> Search results will be here. </div>
             </div>
           )}
         </div>

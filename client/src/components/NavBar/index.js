@@ -1,19 +1,20 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Browsealoud from "../Browsealoud/index";
 import Dictionary from "../Dictionary/index";
 import Note from "../Note/index";
+import BrowseAmodal from "../BrowseAmodal/index";
 // This is for scrolling feature
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 
 import AuthService from "../AuthService";
 import Logout from "../Logout/index";
 import "./style.css";
+import IntroBA from "../IntroBA";
 
 //// This is the Navbar component used in all pages. This includes the dictionary and the sign in and sign up form ////
 
-function Navbar() {
+function Navbar(props) {
   const Auth = new AuthService();
 
   return (
@@ -22,11 +23,16 @@ function Navbar() {
         Knowledge-ABLE
       </Link>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div className="collapse navbar-collapse" id="navbarCollapse">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link
@@ -125,8 +131,9 @@ function Navbar() {
 
           {/* If there is an id token in localStorage indicating that a user is logged in, display the logout link. If no user is logged in, then display the sign up and sign in links */}
           {localStorage.getItem("id_token") ? (
-            <div>
-              <Logout />
+            <div className="logout-link">
+              {/* Passing props from App.js to obtain the username if the user is logged in */}
+              <Logout user={props.user} />
             </div>
           ) : (
             //  {/*SignIn SignUp Forms. */}
@@ -144,8 +151,9 @@ function Navbar() {
             </React.Fragment>
           )}
 
+          {/* The Introduction of Browsealoud dropdown menu */}
           <div>
-            {/* {this.state.loggedIn && <p>Hi, {this.state.username}!</p>})   */}
+            <BrowseAmodal />
           </div>
         </ul>
       </div>
@@ -154,4 +162,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

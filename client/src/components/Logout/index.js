@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AuthService from "../AuthService";
 
-function Logout() {
+function Logout(props) {
   const Auth = new AuthService();
 
   if (Auth.loggedIn()) console.log("Is logged in:", Auth.loggedIn);
@@ -14,7 +14,12 @@ function Logout() {
             Logout
           </a>
         </li>
-        {/* <div>{this.state.loggedIn && <p>Hi, {this.state.username}!</p>}</div> */}
+        <div>
+          <li className="nav-item">
+            {/* passing props from App.js and Navbar to display the username if user is logged in */}
+            {props.user ? <p>Hi, {props.user.username}</p> : null}{" "}
+          </li>
+        </div>
       </div>
     );
   }
