@@ -1,7 +1,6 @@
 import React from "react";
 // import ReactDOM from "react-dom";
 import Modal from "react-responsive-modal";
-import SignInSignUp from "../SignInSignUp/index";
 import IntroBA from "../IntroBA";
 
 // Cited: https://www.npmjs.com/package/react-responsive-modal
