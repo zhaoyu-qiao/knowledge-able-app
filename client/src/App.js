@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-// import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 
@@ -12,7 +11,6 @@ import Dictionary from "./components/Dictionary";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotePage from "./pages/NotePage";
-// import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
   state = {
@@ -28,7 +26,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <NavBar />
+          <NavBar user={this.state.user} />
           {/* <Header /> */}
           <Wrapper>
             <Route exact path="/" component={About} />
