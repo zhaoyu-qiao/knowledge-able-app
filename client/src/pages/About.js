@@ -62,9 +62,8 @@ function About() {
                   <br />
                   Find how to cope with your learning disability.
                   <br /> <br />
-                  Find what you need to help YOU!
+                  Find what you need to help you!
                   <br /> <br />
-                  <br />
                 </h5>
               </div>
             </div>
@@ -91,7 +90,7 @@ function About() {
                   On the YouTube page: <br /> <br />
                   <i className="fa fa-arrow-right text-info "></i> Click on the
                   resources buttons provided to view learning videos.
-                  <br /> <br />
+                  <br />
                 </h5>
               </div>
             </div>
@@ -121,7 +120,6 @@ function About() {
                   </small>
                   <br /> <br />
                   You are not alone. We are here to help!
-                  <br />
                   <br />
                 </h5>
               </div>
