@@ -70,6 +70,14 @@ class Youtube extends Component {
           {" "}
           Get YouTube Auditory Processing Deficit Videos
         </button>
+        <button
+          className="btn btn-info"
+          onClick={this.clicked}
+          value="visual processing deficit"
+        >
+          {" "}
+          Get YouTube Visual Processing Deficit Videos
+        </button>
         <button className="btn btn-info" onClick={this.clicked} value="adhd">
           {" "}
           Get YouTube A.D.H.D Videos
