@@ -47,7 +47,7 @@ function Note(props) {
   };
 
   return (
-    <div style={{ overflow: "scroll", maxHeight: "400" + "px" }}>
+    <div style={{ overflow: "scroll", maxHeight: "600" + "px" }}>
       <div>
         <h4 className="text-info"> Put your notes here </h4>
         <form>

@@ -72,8 +72,10 @@ class Dictionary extends Component {
             </FormBtn>{" "}
           </form>{" "}
         </div>
-        <hr />
+
         <div>
+          <br />
+          <br />
           <h4
             className="text-info"
             style={{

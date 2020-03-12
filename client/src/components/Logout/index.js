@@ -8,18 +8,21 @@ function Logout(props) {
   {
     return (
       <div>
-        <li className="nav-item">
-          {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-          <a className="nav-link" href="/" onClick={() => Auth.logout()}>
-            Logout
-          </a>
-        </li>
-        <div>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a className="nav-link" href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+
           <li className="nav-item">
             {/* passing props from App.js and Navbar to display the username if user is logged in */}
-            {props.user ? <p>Hi, {props.user.username}</p> : null}{" "}
+            {props.user ? (
+              <p className="nav-link text-dark">Hi,{props.user.username}</p>
+            ) : null}{" "}
           </li>
-        </div>
+        </ul>
       </div>
     );
   }

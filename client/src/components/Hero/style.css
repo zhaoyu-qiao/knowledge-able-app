@@ -1,11 +1,3 @@
-/* .hero {
-  height: 700px;
-  background-image: url("images/learning-app-pic-three.jpg");
-  background-size: cover;
-  background-position: right;
-  position: relative;
-} */
-
 .jumbotron {
   background-image: url("images/learning-girl-with-book.png");
   background-repeat: no-repeat;
@@ -16,13 +8,8 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  margin-top: 56px;
+  margin-top: 60px;
 }
-
-/* img {
-  height: 200px;
-  
-} */
 
 .hero::after {
   content: "";

@@ -2,13 +2,23 @@
     border: 2px red dashed;
   margin-top: 20px;
   /* padding-top: 12rem; */
-  
-  button{
-    margin: 10px; 
-    padding: 10px 20px; 
-    font-size: 20px; 
-    background-color: salmon;
-  }
-  .ytbutton{
-      padding-top: 5rem;
-  }
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: salmon;
+}
+.ytbutton {
+  padding-top: 5rem;
+  align-items: center;
+  align-content: center;
+}
+
+.youtube {
+  /* margin-left: 30%; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+}
