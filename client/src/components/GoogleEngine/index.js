@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function GoogleEngine(props) {
   return (
-    <div>
+    <div className="google">
       <script
         async
         src="https://cse.google.com/cse.js?cx=013302808669620956042:x66xgf9gejf"

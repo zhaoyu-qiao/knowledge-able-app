@@ -284,12 +284,15 @@ function Form(props) {
               <h4 className="text-center">
                 Here are four ways to cope with your learning disability
               </h4>
+              <h4 className="text-center">
+                Click on the navigation buttons to view
+              </h4>
 
               <br />
               <br />
 
-              {/* Example Silder 1 */}
-              {/* https://github.com/drygiel/csslider/blob/master/examples/themes/csslider.light.css */}
+              {/* Learning To Cope Slider */}
+              {/* Cited: https://github.com/drygiel/csslider/blob/master/examples/themes/csslider.light.css */}
               <div className="csslider d-flex justify-content-between">
                 <input
                   type="radio"

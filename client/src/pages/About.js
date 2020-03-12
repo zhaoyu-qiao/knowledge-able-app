@@ -7,11 +7,6 @@ import Carousel from "../components/Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 // For the carousel run: npm install react-responsive-carousel
 
-// import SignUpSignInForm from "../components/SignUpForm"
-// import { useParams } from "react-router-dom";
-// import Form from "../components/Form";
-// import images from "./images";
-
 //// This Hero component and the Carousel are for this About page (the cover page). ////
 function About() {
   return (
@@ -65,8 +60,11 @@ function About() {
                   <br />
                   Find educational games. <br />
                   <br />
+                  Find how to cope with your learning disability.
+                  <br /> <br />
                   Find what you need to help YOU!
                   <br /> <br />
+                  <br />
                 </h5>
               </div>
             </div>
@@ -81,16 +79,19 @@ function About() {
               <div className="card-body">
                 <h5 className="card-title">
                   {" "}
-                  On the Learnig Journey page you can: <br /> <br />
+                  On the Learning Journey page you can: <br /> <br />
                   <i className="fa fa-arrow-right text-info "></i> View our
-                  suggested resources <br /> <br />
+                  suggested resources. <br /> <br />
                   <i className="fa fa-arrow-right text-info "></i> Complete the
-                  search form to find resources that will help you with your
-                  learning disability. <br /> <br />
-                  <i className="fa fa-arrow-right text-info "></i> Save the
-                  results you like. <br /> <br />
-                  <i className="fa fa-arrow-right text-info "></i> Add them to
-                  your learning materials and take action. <br /> <br />
+                  search more form to find other resources that will help you
+                  with your learning disability. <br /> <br />
+                  <i className="fa fa-arrow-right text-info "></i> Add the
+                  results you like to your notes and take action.
+                  <br /> <br />
+                  On the YouTube page: <br /> <br />
+                  <i className="fa fa-arrow-right text-info "></i> Click on the
+                  resources buttons provided to view learning videos.
+                  <br /> <br />
                 </h5>
               </div>
             </div>
@@ -113,8 +114,14 @@ function About() {
                   <br /> <br />
                   "In the middle of every difficulty lies opportunity"
                   <br /> <br />
-                  You are not alone. We are here to help!
+                  {/* Cited: https://www.ldrfa.org/inspirational-quotes-by-famous-people-with-learning-disabilities/ */}
+                  "You shouldn't dream your film, you should make it"
+                  <small>
+                    <em> -Steven Spieldberg. Dyslexia, American filmmaker</em>
+                  </small>
                   <br /> <br />
+                  You are not alone. We are here to help!
+                  <br />
                   <br />
                 </h5>
               </div>
