@@ -94,7 +94,7 @@ function Navbar(props) {
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
             <div
               className="dropdown-menu p-4"
-              style={{ overflowY: "scroll", overflow: "hidden" }}
+              style={{ overflow: "hidden" }}
             >
               <Dictionary />
             </div>
@@ -116,7 +116,7 @@ function Navbar(props) {
             {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
             <div
               className="dropdown-menu p-4"
-              style={{ overflowY: "scroll", overflow: "hidden" }}
+              style={{ overflow: "hidden" }}
             >
               <Note />
             </div>
