@@ -50,7 +50,7 @@ function Note(props) {
     <div
       style={{
         overflow: "scroll",
-        maxHeight: "600" + "px",
+        maxHeight: "500" + "px"
       }}
     >
       <div>
@@ -92,7 +92,9 @@ function Note(props) {
             Submit{" "}
           </FormBtn>{" "}
         </form>{" "}
+        <br />
       </div>
+
       <div>
         <Modal
           show={show}
@@ -117,13 +119,13 @@ function Note(props) {
           </Modal.Body>{" "}
         </Modal>
       </div>
-      <hr />
+      <br />
       <div>
         <h4
           className="text-info"
           style={{
             marginTop: 20 + "px",
-            paddingTop: 10 + "px",
+            paddingTop: 2 + "px",
             textAlign: "left"
           }}
         >
