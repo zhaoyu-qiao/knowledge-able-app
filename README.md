@@ -14,7 +14,7 @@ http://knowledge-able.herokuapp.com/
 ## Amazing Team Members
 - Karlelisa - Authentication master, UI designer - https://github.com/Karlelisa
 - Danielle - Business Development, Project Management, Utility Player - https://github.com/daniellekeefe
-- Jo - Functions builder, Git manager, DBA - https://github.com/zhaoyu-qiao
+- Jo - Functions builder, Git manager, DB - https://github.com/zhaoyu-qiao
 ## About Page Screenshot
 ![About Page](client/public/images/cover-page.png)
 
