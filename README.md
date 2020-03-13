@@ -16,7 +16,7 @@ http://knowledge-able.herokuapp.com/
 - Danielle - Business Development, Project Management, Utility Player - https://github.com/daniellekeefe
 - Jo - Functions builder, Git manager, DB - https://github.com/zhaoyu-qiao
 ## About Page Screenshot
-![About Page](/public/images/cover-page.png)
+![About Page](client/public/images/cover-page.png)
 
 
 
