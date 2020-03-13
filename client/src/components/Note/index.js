@@ -51,7 +51,6 @@ function Note(props) {
       style={{
         overflow: "scroll",
         maxHeight: "600" + "px",
-        overflow: "hidden"
       }}
     >
       <div>
