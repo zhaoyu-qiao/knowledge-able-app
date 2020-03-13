@@ -56,7 +56,6 @@ class Dictionary extends Component {
         style={{
           overflow: "scroll",
           maxHeight: "400" + "px",
-          overflow: "hidden"
         }}
       >
         <div>
