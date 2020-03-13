@@ -52,7 +52,13 @@ class Dictionary extends Component {
 
   render() {
     return (
-      <div style={{ overflow: "scroll", maxHeight: "400" + "px" }}>
+      <div
+        style={{
+          overflow: "scroll",
+          maxHeight: "400" + "px",
+          overflow: "hidden"
+        }}
+      >
         <div>
           <h4 className="text-info"> Search your word here </h4>
           <form>
