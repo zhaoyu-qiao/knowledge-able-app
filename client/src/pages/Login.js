@@ -28,6 +28,7 @@ class Login extends Component {
         //   isAuthe: true
         // });
         console.log("Logged In", this.state.username);
+
         localStorage.setItem("username", this.state.username);
 
         // this.props.history.push("/");

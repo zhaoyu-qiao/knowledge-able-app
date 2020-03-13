@@ -63,7 +63,7 @@ function About() {
                   Find how to cope with your learning disability.
                   <br /> <br />
                   Find what you need to help you!
-                  <br /> <br />
+                  <br /> <br /> <br />
                 </h5>
               </div>
             </div>
@@ -120,7 +120,7 @@ function About() {
                   </small>
                   <br /> <br />
                   You are not alone. We are here to help!
-                  <br />
+                  <br /> <br />
                 </h5>
               </div>
             </div>
