@@ -24,6 +24,18 @@ http://knowledge-able.herokuapp.com/
 
 ![About Page](client/public/images/cover-page.png)
 
+## Users mongoDB showing authenticated user with hashed password (example user)
+> use learningdisabilities
+switched to db learningdisabilities
+> show collections
+books
+notes
+users
+> db.users.find()
+{ "_id" : ObjectId("5e65339d730a2a54507be51b"), "notes" : [ ], "username" : "karlelisa", "email" : "karlelisaw@gmail.com", "password" : "$2b$10$Ubz3GrU0NRI4r4ONeWA4v.xEHrMr7vhB4qXmK5Gxmm69djvkfvA7a", "__v" : 0 }
+{ "_id" : ObjectId("5e68f65a28c5df5ec21cd4ce"), "notes" : [ ], "username" : "karlie", "email" : "karliew@gmail.com", "password" : "$2b$10$/PFZdzzF2gnLehffXq34UOrJusBlFYXktRqAnhHAYQBFgxR8Mkbtq", "__v" : 0 }
+
+
 
 
 
