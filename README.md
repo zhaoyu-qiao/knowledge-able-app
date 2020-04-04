@@ -12,7 +12,7 @@ Using this app will help people gain a solid understanding of different types of
 - Authentication: JSONWebToken, JWT decode, BCrypt JS, Morgan
 - Project Management: Github project & Slack
 
-**Please note: [Browsealoud](https://www.youtube.com/watch?v=w9uxDRpISUI) software was a free trial we used from Feb 23rd to March 27th.
+**Please note: [Browsealoud](https://www.youtube.com/watch?v=w9uxDRpISUI) software was a free trial we used from Feb 23, 2020 to March 27, 2020.
 
 ## Check out the app in action
 http://knowledge-able.herokuapp.com/
