@@ -15,7 +15,10 @@ Using this app will help people gain a solid understanding of different types of
 **Please note: [Browsealoud](https://www.youtube.com/watch?v=w9uxDRpISUI) software was a free trial we used from Feb 23, 2020 to March 27, 2020.
 
 ## Check out the app in action
+- On Heroku
 http://knowledge-able.herokuapp.com/
+- On Youtube
+https://www.youtube.com/watch?v=4YjFhAbVeO4
 
 ## Amazing Team Members
 - Karlelisa - Authentication master, UI designer - https://github.com/Karlelisa
